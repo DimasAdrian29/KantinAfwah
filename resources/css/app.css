@@ -1,3 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
+/* Mengatur kelas .active agar menambahkan garis bawah */
+.navbar-nav .nav-link.active {
+    border-bottom: 2px solid #000;  /* Warna garis bawah */
+    font-weight: bold;  /* Opsional: menebalkan teks link yang aktif */
+}
