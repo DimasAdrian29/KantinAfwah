@@ -678,3 +678,17 @@ footer .social-icons a {
     }
 }
 
+.ingredients-list {
+    list-style-type: none;
+    padding: 0;
+}
+.ingredients-list li {
+    background-color: #f8f8f8;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.ingredients-list li strong {
+    color: #007BFF;
+}
