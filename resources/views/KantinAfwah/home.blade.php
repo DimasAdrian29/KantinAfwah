@@ -15,8 +15,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="{{ route('KantinAfwah.home') }}">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRjLWhWpx9PfbzysffLbMA_DK_8jawJAVHbw&s"
-                 alt="Kantin Afwah" class="img-fluid img-hover-effect" style="height: 40px;">
+            <img src="{{ asset('images/projek.png') }}" alt="Kantin Afwah" class="img-fluid img-hover-effect" style="height: 40px;">
         </a>
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav">
@@ -74,54 +73,60 @@
 
 
     <!-- Hero Section -->
-    <header class="hero text-center"
-        style="background-image: url('https://d2vuyvo9qdtgo9.cloudfront.net/company-news/January2024/yMz4kTVAKGTFW4hOv4Nf.webp'); background-size: cover; background-position: center; color: white; padding: 100px 0;">
-        <!-- Gambar Logo -->
-        <div class="hero-image">
-            <img src="https://cdn.pixabay.com/photo/2021/09/22/17/17/mcdonalds-6647433_1280.png" alt="Restaurant Banner"
-                class="img-fluid">
-        </div>
-        <!-- Teks -->
+    <section class="hero-section">
         <h1>Welcome to Kantin Afwah</h1>
-        <p>Enjoy the most delicious meals with us!</p>
-        <a href="#menu" class="btn btn-primary">Explore Our Menu</a>
+        <p>Experience delicious dishes made with love</p>
+        <a href="#menu" class="btn btn-light">Explore Our Menu</a>
+    </section>
     </header>
 
     <!-- About Us Section -->
-    <section id="about" class="container mt-5">
-        <h2>About Us</h2>
-        <p>We are a family-friendly restaurant that serves high-quality food with fresh ingredients. Our vision is to
-            provide a warm atmosphere and delicious meals for everyone.</p>
-            <a href="about_us" class="btn btn-primary">Informasi Lengkap</a>
-    </section>
-
-    <!-- Menu Section -->
-    <section id="menu" class="container mt-5">
-        <h2>Our Menu</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <img src="https://d2vuyvo9qdtgo9.cloudfront.net/foods/October2023/uQSETIkvtYba9RVGHiGe.webp"
-                    alt="Dish 1" class="img-fluid">
-                <h3>Menu 1</h3>
-                <p>4 Sehat 5 Sempurna</p>
-                <a href="#menu" class="btn btn-primary">Menu 1</a>
+    <section id="about" class="container mt-5 about-section">
+        <div class="row text-center">
+            <div class="col-lg-6">
+                <h2>About Us</h2>
+                <p class="lead">We are a passionate group dedicated to providing exceptional food and service to our customers. Our mission is to create an unforgettable dining experience.</p>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-check-circle"></i> High-quality ingredients</li>
+                    <li><i class="fas fa-check-circle"></i> Family-friendly atmosphere</li>
+                    <li><i class="fas fa-check-circle"></i> Exceptional service</li>
+                </ul>
             </div>
-            <div class="col-md-4">
-                <img src="https://d2vuyvo9qdtgo9.cloudfront.net/foods/October2023/9hn3Gu6SwCg8TNBMaXFr.webp"
-                    alt="Dish 2" class="img-fluid">
-                <h3>Menu 2</h3>
-                <p>Harganya Terjangkau Dan Ukurannya Lebih Besar!</p>
-                <a href="#menu" class="btn btn-primary">Menu 2</a>
-            </div>
-            <div class="col-md-4">
-                <img src="https://d2vuyvo9qdtgo9.cloudfront.net/foods/October2023/Mdfc31HLjuorHac10yKX.webp"
-                    alt="Dish 3" class="img-fluid">
-                <h3>Menu 3</h3>
-                <p>Lezat Dan Bergizi</p>
-                <a href="#menu" class="btn btn-primary">Menu 3</a>
+            <div class="col-lg-6">
+                <img src="{{ asset('images/projek.png') }}" alt="About Us Image" class="img-fluid about-image">
             </div>
         </div>
     </section>
+
+
+    <!-- Menu Section -->
+    <section id="menu" class="container mt-5 menu-section">
+        <h2 class="text-center mb-4">Our Menu</h2>
+        <div class="row">
+            <!-- Menu Item 1 -->
+            <div class="col-md-4 menu-item">
+                <img src="https://thumb.viva.id/intipseleb/1265x711/2022/06/08/62a031618332c-makanan-khas-riau.jpg" alt="Dish 1" class="img-fluid menu-img">
+                <h3>Roti Jala</h3>
+                <p>4 Sehat 5 Sempurna</p>
+                <a href="#menu" class="btn btn-custom">Menu 1</a>
+            </div>
+            <!-- Menu Item 2 -->
+            <div class="col-md-4 menu-item">
+                <img src="https://awsimages.detik.net.id/community/media/visual/2022/06/18/10-resep-masakan-bali-populer-ayam-betutu-hingga-sate-lilit-6_169.jpeg?w=1200" alt="Dish 2" class="img-fluid menu-img">
+                <h3>Sate Ayam</h3>
+                <p>Harganya Terjangkau Dan Ukurannya Lebih Besar!</p>
+                <a href="#menu" class="btn btn-custom">Menu 2</a>
+            </div>
+            <!-- Menu Item 3 -->
+            <div class="col-md-4 menu-item">
+                <img src="https://www.unileverfoodsolutions.co.id/dam/global-ufs/mcos/SEA/calcmenu/recipes/ID-recipes/soups/soto-betawi/main-header.jpg" alt="Dish 3" class="img-fluid menu-img">
+                <h3>Soto Sapi</h3>
+                <p>Lezat Dan Bergizi</p>
+                <a href="#menu" class="btn btn-custom">Menu 3</a>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Contact Section -->
     <section id="contact" class="container mt-5">
@@ -140,13 +145,49 @@
                 <i class="fab fa-whatsapp fa-2x"></i>
             </a>
         </div>
-    </section>
+    </section><ul>
 
-    <footer class="bg-light text-center py-3">
-        <p>&copy; 2024 Kantin Afwah. All Rights Reserved.</p>
+    </ul>
 
+    <footer class="bg-dark text-light py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Kolom 1: Informasi Restoran -->
+            <div class="col-md-4">
+                <h5 class="mb-3">Kantin Afwah</h5>
+                <p>Enjoy freshly prepared meals, made with love and the finest ingredients. Join us and taste the difference!</p>
+            </div>
+            <!-- Kolom 2: Tautan Cepat -->
+            <div class="col-md-4">
+                <h5 class="mb-3">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#home" class="text-light">Home</a></li>
+                    <li><a href="#menu" class="text-light">Menu</a></li>
+                    <li><a href="#about" class="text-light">About Us</a></li>
+                    <li><a href="#contact" class="text-light">Contact</a></li>
+                </ul>
+            </div>
+            <!-- Kolom 3: Ikon Sosial -->
+            <div class="col-md-4">
+                <h5 class="mb-3">Follow Us</h5>
+                <div class="social-icons">
+                    <a href="#" class="text-light mx-2">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-light mx-2">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-light mx-2">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <hr class="my-4" style="border-top: 1px solid #444;">
+        <p class="mb-0">&copy; 2024 Kantin Afwah. All Rights Reserved.</p>
+    </div>
+</footer>
 
-    </footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>

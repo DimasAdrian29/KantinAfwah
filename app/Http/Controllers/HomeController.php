@@ -24,10 +24,6 @@ class HomeController extends Controller
     {
         return view('KantinAfwah.career');
     }
-    public function contact_us()
-    {
-        return view('KantinAfwah.contact');
-    }
     public function login()
     {
         return view('KantinAfwah.login');
