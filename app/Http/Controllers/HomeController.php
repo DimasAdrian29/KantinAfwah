@@ -28,4 +28,12 @@ class HomeController extends Controller
     {
         return view('KantinAfwah.contact');
     }
+    public function login()
+    {
+        return view('KantinAfwah.login');
+    }
+    public function register()
+    {
+        return view('KantinAfwah.register');
+    }
 }

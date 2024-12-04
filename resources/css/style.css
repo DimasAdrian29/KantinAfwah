@@ -1,0 +1,359 @@
+
+/* Mengatur kelas .active agar menambahkan garis bawah */
+.navbar-nav .nav-link.active {
+    border-bottom: 2px solid #000;  /* Warna garis bawah */
+    font-weight: bold;  /* Opsional: menebalkan teks link yang aktif */
+}
+/* Reset dasar dan pengaturan font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #007bff;
+    background-color: transparent;
+            box-shadow: none;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    margin-left: 15px;
+    font-size: 16px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffcc00;
+}
+
+/* Hero Section Styling */
+.hero {
+    background-image: url('images/restaurant-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #f8f9fa;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5);
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #f8f9fa;
+    font-style: italic;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5);
+}
+
+.hero .btn {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.hero .btn:hover {
+    background-color: #e6b800;
+}
+
+.hero img {
+    max-width: 300px;
+    border-radius: 8px; /* Jika ingin memberikan efek sudut melengkung pada gambar */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Efek bayangan agar gambar lebih menonjol */
+}
+
+.img-hover-effect {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.img-hover-effect:hover {
+    transform: scale(1.1); /* Memperbesar gambar sedikit saat hover */
+    opacity: 0.8; /* Menurunkan opasitas gambar saat hover */
+}
+
+/* About Us Section */
+#about {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #fff;
+}
+
+#about h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+#about p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Menu Section */
+#menu {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+#menu h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+}
+
+#menu .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu .col-md-4 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#menu img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#menu h3 {
+    font-size: 24px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+#menu p {
+    font-size: 16px;
+    color: #777;
+}
+#menu .btn{
+    background-color: #ffcc00;
+    color: #333;
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#about .btn{
+    background-color: #ffcc00;
+    color: #333;
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#login .btn {
+    display: inline-block; /* Membuat tombol seperti elemen inline */
+    justify-content: flex-end;
+    margin: 0;
+    background-color: #e6b800; /* Warna latar belakang tombol */
+    color: #333; /* Warna teks */
+    padding: 12px 20px; /* Padding tombol */
+    font-size: 14px; /* Ukuran font tombol */
+    border: none; /* Tanpa border */
+    border-radius: 5px; /* Sudut tombol melengkung */
+    text-transform: uppercase; /* Membuat teks menjadi huruf kapital */
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    transition: background-color 0.3s, transform 0.3s; /* Transisi halus untuk perubahan warna dan efek */
+}
+
+/* Mengatur tombol Register */
+#register .btn {
+    display: inline-block; /* Membuat tombol seperti elemen inline */
+    justify-content: flex-end;
+    margin: 0;
+    background-color: #e6b800; /* Warna latar belakang tombol */
+    color: #333; /* Warna teks */
+    padding: 12px 20px; /* Padding tombol */
+    font-size: 14px; /* Ukuran font tombol */
+    border: none; /* Tanpa border */
+    border-radius: 5px; /* Sudut tombol melengkung */
+    text-transform: uppercase; /* Membuat teks menjadi huruf kapital */
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    transition: background-color 0.3s, transform 0.3s; /* Transisi halus untuk perubahan warna dan efek */
+}
+
+/* Menambahkan jarak antara tombol Login dan Register */
+#login ul, #register ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+}
+
+#login li, #register li {
+    margin-right: 20px; /* Memberikan jarak antara tombol Login dan Register */
+}
+
+/* Efek hover saat kursor diarahkan ke tombol */
+#login .btn:hover, #register .btn:hover {
+    background-color: #cc9900; /* Warna latar belakang saat hover */
+    transform: translateY(-3px); /* Efek angkat tombol saat hover */
+    color: #fff; /* Mengubah warna teks menjadi putih */
+}
+/* Contact Section */
+#contact {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+#contact p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #007bff;
+    color:#000;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 16px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 14px;
+    }
+
+    #menu .row {
+        flex-direction: column;
+    }
+
+    #menu .col-md-4 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #about p {
+        font-size: 16px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+}
+.navbar-brand {
+    position: absolute;
+    right: 20px; /* Sesuaikan jarak dari kanan */
+}
+
+.dropdown-menu {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    border: 1px solid #ddd;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    transform: translateY(20px);
+}
+
+/* Menampilkan dropdown saat aktif */
+.dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Styling untuk item dropdown */
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    font-size: 16px;
+    color: #333;
+    border-radius: 6px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+/* Hover effect untuk item dropdown */
+.dropdown-item:hover {
+    background-color: #f5f5f5;
+    transform: translateX(5px); /* Efek sedikit geser ke kanan */
+}
+
+/* Styling untuk ikon di dalam dropdown */
+.dropdown-item i {
+    margin-right: 15px;
+    font-size: 22px; /* Ukuran ikon yang lebih besar */
+    transition: transform 0.2s ease;
+}
+
+/* Hover effect untuk ikon */
+.dropdown-item:hover i {
+    transform: scale(1.2); /* Membesarkan ikon sedikit */
+}
+
+/* Dropdown Hover */
+.nav-item.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Styling untuk navbar */
+.navbar {
+    background-color: #f8f9fa;
+}

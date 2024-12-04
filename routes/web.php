@@ -14,6 +14,8 @@ Route::get('/about_us', [HomeController::class, 'about_us'])->name('KantinAfwah.
 Route::get('/contact_us', [HomeController::class, 'contact_us'])->name('KantinAfwah.contact_us');
 Route::get('/news', [HomeController::class, 'news'])->name('KantinAfwah.news');
 Route::get('/ourbrands', [HomeController::class, 'ourbrands'])->name('KantinAfwah.ourbrands');
+Route::get('/login', [HomeController::class, 'login'])->name('KantinAfwah.login');
+Route::get('/register', [HomeController::class, 'register'])->name('KantinAfwah.register');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
