@@ -23,4 +23,8 @@ Route::middleware('auth')->group(function () {
 
 Route::resource('menu', MenuController::class);
 
+Route::get('/aboutus', function () {
+    return view('about');
+});
+
 require __DIR__.'/auth.php';
