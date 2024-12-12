@@ -7,41 +7,28 @@ use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
 
-class HomeController extends Controller
+class QuestionAnswerController extends Controller
 {
-    public function home()
-    {
-        return view('KantinAfwah.home');
-    }
-    public function ourbrands()
-    {
-        return view('KantinAfwah.ourbrands');
-    }
-    public function about_us()
-    {
-        return view('KantinAfwah.about');
-    }
-    public function news()
-    {
-        return view('KantinAfwah.news&event');
-    }
-    public function career()
-    {
-        return view('KantinAfwah.career');
-    }
-    public function login()
-    {
-        return view('KantinAfwah.login');
-    }
-    public function register()
-    {
-        return view('KantinAfwah.register');
-    }
+    /**
+     * Display a listing of the resource.
+     */
     public function index(): View
     {
         $QuestionAnswer = QuestionAnswer::all();
         return view('questionanswer.index',compact('QuestionAnswer'));//menampilkan view form input pesansaran
     }
+
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
     public function store(Request $request): RedirectResponse
     {
         $validated = $request->validate([
@@ -51,12 +38,28 @@ class HomeController extends Controller
         $request->user()->QuestionAnswer()->create($validated);
         return redirect()->route('question_answer.index')->with('success','Pertanyaan berhasil dikirim!');
     }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show(QuestionAnswer $questionAnswer)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
     public function edit(int $id): View
     {
         $questionAnswer = QuestionAnswer::findOrFail($id);
 
         return view('questionanswer.edit',compact('questionAnswer'));
     }
+
+    /**
+     * Update the specified resource in storage.
+     */
     public function update(Request $request, int $id)
     {
         $validated = $request->validate([
@@ -69,6 +72,10 @@ class HomeController extends Controller
 
         return redirect()->route('question_answer.index')->with('success','Pesan Berhasil');
     }
+
+    /**
+     * Remove the specified resource from storage.
+     */
     public function destroy(QuestionAnswer $questionAnswer)
     {
         $questionAnswer->delete();
