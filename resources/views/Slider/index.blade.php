@@ -34,11 +34,12 @@
 
                         <!-- Tombol Edit dan Hapus -->
                         <div class="mt-4">
-                            <a href="{{ route('sliders.edit', $slider->id_slider) }}"
-                                class="text-blue-500 hover:underline">Edit</a>
+                            <!-- Tombol Edit -->
+                            <a href="{{ route('sliders.edit', $slider->id) }}"
+                               class="text-blue-500 hover:underline">Edit</a>
 
-                            <form action="{{ route('sliders.destroy', $slider->id_slider) }}" method="POST" class="inline"
-                                onsubmit="return confirm('Apakah Anda yakin ingin menghapus slider ini?');">
+                            <!-- Form Hapus -->
+                            <form action="{{ route('sliders.destroy', $slider->id) }}" method="POST" class="inline" onsubmit="return confirm('Apakah Anda yakin ingin menghapus slider ini?');">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="text-red-500 hover:underline ml-2">Hapus</button>

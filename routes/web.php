@@ -1,9 +1,11 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SliderController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\QuestionAnswerController;
+use App\Http\Controllers\LandingController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -29,6 +31,11 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::resource('sliders', SliderController::class)->only(['index', 'store','destroy','create','edit','update']);
+
 Route::resource('question_answer', QuestionAnswerController::class)->only(['index', 'store','edit','update','destroy']);
 
 require __DIR__.'/auth.php';
+
+
+Route::get('/landing', [LandingController::class, 'index'])->name('home');
