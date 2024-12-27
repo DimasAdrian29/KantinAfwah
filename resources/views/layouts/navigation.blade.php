@@ -18,8 +18,8 @@
                     </x-nav-link>
                     <x-nav-link :href="route('menu.index')" :active="request()->routeIs('menu.index')">
                         {{ __('Menu') }}
-
                     </x-nav-link>
+
                 </div>
 
             </div>

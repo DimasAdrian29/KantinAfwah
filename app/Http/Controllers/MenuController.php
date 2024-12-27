@@ -82,7 +82,7 @@ class MenuController extends Controller
             'gambar' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
         ]);
 
-        
+
         $menu->nama_menu = $request->nama_menu;
         $menu->deskripsi = $request->deskripsi;
         $menu->harga = $request->harga;
