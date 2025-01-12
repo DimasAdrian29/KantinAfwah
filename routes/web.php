@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\AboutController;
-use App\Http\Controllers\QuotesController;
+use App\Http\Controllers\KutipanController;
 use App\Http\Controllers\ProfileController;
 
 Route::get('/', function () {
@@ -35,6 +35,6 @@ Route::resource('about', AboutController::class);
 //     return view('about');
 // });
 
-Route::resource('quotes', QuotesController::class);
+Route::resource('kutipan', KutipanController::class);
 
 require __DIR__.'/auth.php';

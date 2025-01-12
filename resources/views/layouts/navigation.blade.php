@@ -19,7 +19,12 @@
                     <x-nav-link :href="route('menu.index')" :active="request()->routeIs('menu.index')">
                         {{ __('Menu') }}
                     </x-nav-link>
-
+                    <x-nav-link :href="route('about.index')" :active="request()->routeIs('about.index')">
+                        {{ __('About') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('kutipan.index')" :active="request()->routeIs('kutipan.index')">
+                        {{ __('Kutipan') }}
+                    </x-nav-link>
                 </div>
 
             </div>
