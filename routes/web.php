@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\GaleryController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PromoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SliderController;
@@ -20,7 +23,6 @@ Route::get('/login', [HomeController::class, 'login'])->name('KantinAfwah.login'
 Route::get('/register', [HomeController::class, 'register'])->name('KantinAfwah.register');
 
 
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -32,10 +34,11 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::resource('sliders', SliderController::class)->only(['index', 'store','destroy','create','edit','update']);
-
 Route::resource('question_answer', QuestionAnswerController::class)->only(['index', 'store','edit','update','destroy']);
+Route::get('/landing', [LandingController::class, 'index'])->name('home');
+Route::resource('galery', GaleryController::class)->only(['create','index', 'store', 'edit', 'update', 'destroy']);
+Route::resource('promo', PromoController::class)->only(['create','index', 'store', 'edit', 'update', 'destroy']);
 
 require __DIR__.'/auth.php';
 
 
-Route::get('/landing', [LandingController::class, 'index'])->name('home');
