@@ -1,15 +1,47 @@
-
 /* Mengatur kelas .active agar menambahkan garis bawah */
 .navbar-nav .nav-link.active {
-    border-bottom: 2px solid #000;  /* Warna garis bawah */
-    font-weight: bold;  /* Opsional: menebalkan teks link yang aktif */
+    color: red;
+    /* Active item color */
+    font-weight: bold;
 }
+
+.btn-outline-light:hover,
+.btn-light:hover {
+    background-color: #ffcc00;
+    /* Warna latar belakang tombol saat hover */
+    color: #007bff;
+    /* Mengubah warna teks tombol */
+}
+
 /* Reset dasar dan pengaturan font */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+
+.navbar-nav .nav-link {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+
+.navbar-toggler-icon {
+    background-color: white;
+    /* Mengubah warna icon toggle menjadi putih */
+}
+
+.navbar-toggler {
+    border: 1px solid #ddd;
+    right: .5rem;
+    position: absolute;
+    padding: .5rem;
+}
+
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -19,9 +51,11 @@ body {
 
 /* Navbar styling */
 .navbar {
-    background-color: #007bff;
-    background-color: transparent;
-            box-shadow: none;
+    background-color: white ;
+    box-shadow: none;
+    padding: 0.5rem 1rem;
+    height: 68px;
+    display: flex;
 }
 
 .navbar-brand {
@@ -32,13 +66,20 @@ body {
 }
 
 .navbar-nav .nav-link {
-    color: #fff;
+    color: red;
+    /* Teks berwarna putih */
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
     margin-left: 15px;
     font-size: 16px;
+    transition: color 0.3s ease-in-out;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #ffcc00;
+    color: red;
+    /* Gold color on hover */
+    text-decoration: underline;
+    transform: scale(1.1);
+    /* Slight zoom effect */
 }
 
 /* Hero Section Styling */
@@ -84,8 +125,10 @@ body {
 
 .hero img {
     max-width: 300px;
-    border-radius: 8px; /* Jika ingin memberikan efek sudut melengkung pada gambar */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Efek bayangan agar gambar lebih menonjol */
+    border-radius: 8px;
+    /* Jika ingin memberikan efek sudut melengkung pada gambar */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    /* Efek bayangan agar gambar lebih menonjol */
 }
 
 .img-hover-effect {
@@ -93,8 +136,10 @@ body {
 }
 
 .img-hover-effect:hover {
-    transform: scale(1.1); /* Memperbesar gambar sedikit saat hover */
-    opacity: 0.8; /* Menurunkan opasitas gambar saat hover */
+    transform: scale(1.1);
+    /* Memperbesar gambar sedikit saat hover */
+    opacity: 0.8;
+    /* Menurunkan opasitas gambar saat hover */
 }
 
 /* About Us Section */
@@ -137,12 +182,15 @@ body {
 
 .menu-item {
     text-align: center;
-    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+    transition: transform 0.3s ease-in-out;
+    /* Smooth transition for hover effect */
 }
 
 .menu-item:hover {
-    transform: scale(1.05); /* Slightly scale up when hovered */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+    transform: scale(1.05);
+    /* Slightly scale up when hovered */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    /* Add shadow on hover */
 }
 
 .menu-img {
@@ -153,8 +201,10 @@ body {
 }
 
 .menu-img:hover {
-    transform: scale(1.05); /* Scale image on hover */
-    filter: brightness(80%); /* Slightly darken image on hover */
+    transform: scale(1.05);
+    /* Scale image on hover */
+    filter: brightness(80%);
+    /* Slightly darken image on hover */
 }
 
 .menu-item h3 {
@@ -200,9 +250,11 @@ body {
     .menu-section {
         padding: 60px 20px;
     }
+
     .menu-item h3 {
         font-size: 20px;
     }
+
     .menu-item p {
         font-size: 14px;
     }
@@ -211,16 +263,23 @@ body {
 
 
 .about-section {
-    background-color: #f8f9fa; /* Light background color */
-    padding: 60px 0; /* Padding to add some space around */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+    background-color: #f8f9fa;
+    /* Light background color */
+    padding: 60px 0;
+    /* Padding to add some space around */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Soft shadow */
+    transition: all 0.3s ease-in-out;
+    /* Smooth transition for hover effect */
 }
 
 .about-section:hover {
-    transform: scale(1.02); /* Slightly scale up when hovered */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow effect */
+    transform: scale(1.02);
+    /* Slightly scale up when hovered */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Increase shadow effect */
 }
 
 .about-section h2 {
@@ -254,7 +313,8 @@ body {
 }
 
 .about-section ul li i {
-    color: #28a745; /* Green check icon */
+    color: #28a745;
+    /* Green check icon */
     margin-right: 10px;
 }
 
@@ -285,63 +345,93 @@ body {
     .about-section {
         padding: 40px 20px;
     }
+
     .about-section h2 {
         font-size: 28px;
     }
+
     .about-section p {
         font-size: 16px;
     }
 }
 
 #login .btn {
-    display: inline-block; /* Membuat tombol seperti elemen inline */
+    display: inline-block;
+    /* Membuat tombol seperti elemen inline */
     justify-content: flex-end;
     margin: 0;
-    background-color: #e6b800; /* Warna latar belakang tombol */
-    color: #333; /* Warna teks */
-    padding: 12px 20px; /* Padding tombol */
-    font-size: 14px; /* Ukuran font tombol */
-    border: none; /* Tanpa border */
-    border-radius: 5px; /* Sudut tombol melengkung */
-    text-transform: uppercase; /* Membuat teks menjadi huruf kapital */
-    text-decoration: none; /* Menghilangkan garis bawah pada link */
-    transition: background-color 0.3s, transform 0.3s; /* Transisi halus untuk perubahan warna dan efek */
+    background-color: #e6b800;
+    /* Warna latar belakang tombol */
+    color: #333;
+    /* Warna teks */
+    padding: 12px 20px;
+    /* Padding tombol */
+    font-size: 14px;
+    /* Ukuran font tombol */
+    border: none;
+    /* Tanpa border */
+    border-radius: 5px;
+    /* Sudut tombol melengkung */
+    text-transform: uppercase;
+    /* Membuat teks menjadi huruf kapital */
+    text-decoration: none;
+    /* Menghilangkan garis bawah pada link */
+    transition: background-color 0.3s, transform 0.3s;
+    /* Transisi halus untuk perubahan warna dan efek */
 }
 
 /* Mengatur tombol Register */
 #register .btn {
-    display: inline-block; /* Membuat tombol seperti elemen inline */
+    display: inline-block;
+    /* Membuat tombol seperti elemen inline */
     justify-content: flex-end;
     margin: 0;
-    background-color: #e6b800; /* Warna latar belakang tombol */
-    color: #333; /* Warna teks */
-    padding: 12px 20px; /* Padding tombol */
-    font-size: 14px; /* Ukuran font tombol */
-    border: none; /* Tanpa border */
-    border-radius: 5px; /* Sudut tombol melengkung */
-    text-transform: uppercase; /* Membuat teks menjadi huruf kapital */
-    text-decoration: none; /* Menghilangkan garis bawah pada link */
-    transition: background-color 0.3s, transform 0.3s; /* Transisi halus untuk perubahan warna dan efek */
+    background-color: #e6b800;
+    /* Warna latar belakang tombol */
+    color: #333;
+    /* Warna teks */
+    padding: 12px 20px;
+    /* Padding tombol */
+    font-size: 14px;
+    /* Ukuran font tombol */
+    border: none;
+    /* Tanpa border */
+    border-radius: 5px;
+    /* Sudut tombol melengkung */
+    text-transform: uppercase;
+    /* Membuat teks menjadi huruf kapital */
+    text-decoration: none;
+    /* Menghilangkan garis bawah pada link */
+    transition: background-color 0.3s, transform 0.3s;
+    /* Transisi halus untuk perubahan warna dan efek */
 }
 
 /* Menambahkan jarak antara tombol Login dan Register */
-#login ul, #register ul {
+#login ul,
+#register ul {
     padding: 0;
     margin: 0;
     list-style: none;
     display: flex;
 }
 
-#login li, #register li {
-    margin-right: 20px; /* Memberikan jarak antara tombol Login dan Register */
+#login li,
+#register li {
+    margin-right: 20px;
+    /* Memberikan jarak antara tombol Login dan Register */
 }
 
 /* Efek hover saat kursor diarahkan ke tombol */
-#login .btn:hover, #register .btn:hover {
-    background-color: #cc9900; /* Warna latar belakang saat hover */
-    transform: translateY(-3px); /* Efek angkat tombol saat hover */
-    color: #fff; /* Mengubah warna teks menjadi putih */
+#login .btn:hover,
+#register .btn:hover {
+    background-color: #cc9900;
+    /* Warna latar belakang saat hover */
+    transform: translateY(-3px);
+    /* Efek angkat tombol saat hover */
+    color: #fff;
+    /* Mengubah warna teks menjadi putih */
 }
+
 /* Contact Section */
 #contact {
     background-color: #fff;
@@ -364,7 +454,7 @@ body {
 /* Footer Styling */
 footer {
     background-color: #007bff;
-    color:#000;
+    color: #000;
     padding: 20px 0;
     text-align: center;
 }
@@ -384,7 +474,11 @@ footer p {
     }
 
     .navbar-nav .nav-link {
-        font-size: 14px;
+        font-size: 1.2rem;
+    }
+
+    .navbar-nav {
+        text-align: center;
     }
 
     #menu .row {
@@ -404,13 +498,15 @@ footer p {
         font-size: 14px;
     }
 }
+
 .navbar-brand {
     position: absolute;
-    right: 20px; /* Sesuaikan jarak dari kanan */
+    left: 20px;
+    /* Sesuaikan jarak dari kanan */
 }
 
 .dropdown-menu {
-    background-color: #fff;
+    background-color: #dc3545;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 10px 0;
@@ -419,6 +515,8 @@ footer p {
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
     transform: translateY(20px);
+    position: static;
+        float: none;
 }
 
 /* Menampilkan dropdown saat aktif */
@@ -434,27 +532,32 @@ footer p {
     align-items: center;
     padding: 12px 20px;
     font-size: 16px;
-    color: #333;
+    color: white;
     border-radius: 6px;
-    transition: background-color 0.2s, transform 0.2s;
+    transition: background-color 0.3s ease;
 }
 
 /* Hover effect untuk item dropdown */
 .dropdown-item:hover {
-    background-color: #f5f5f5;
-    transform: translateX(5px); /* Efek sedikit geser ke kanan */
+    background-color: #ffc107;
+    /* Gold on hover */
+    color: #000;
+    transform: translateX(5px);
+    /* Efek sedikit geser ke kanan */
 }
 
 /* Styling untuk ikon di dalam dropdown */
 .dropdown-item i {
     margin-right: 15px;
-    font-size: 22px; /* Ukuran ikon yang lebih besar */
+    font-size: 22px;
+    /* Ukuran ikon yang lebih besar */
     transition: transform 0.2s ease;
 }
 
 /* Hover effect untuk ikon */
 .dropdown-item:hover i {
-    transform: scale(1.2); /* Membesarkan ikon sedikit */
+    transform: scale(1.2);
+    /* Membesarkan ikon sedikit */
 }
 
 /* Dropdown Hover */
@@ -462,50 +565,63 @@ footer p {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+    background-color: #e74c3c;
 }
 
-/* Styling untuk navbar */
-.navbar {
-    background-color: #f8f9fa;
-}
+
 
 .custom-btn {
     font-size: 18px;
     font-weight: bold;
     padding: 12px 30px;
-    border-radius: 30px; /* Membuat tombol lebih bulat */
-    background-color: #007bff; /* Warna awal tombol */
-    color: white; /* Warna teks */
+    border-radius: 30px;
+    /* Membuat tombol lebih bulat */
+    background-color: #007bff;
+    /* Warna awal tombol */
+    color: white;
+    /* Warna teks */
     text-align: center;
-    text-decoration: none; /* Menghilangkan underline */
+    text-decoration: none;
+    /* Menghilangkan underline */
     display: inline-block;
-    transition: all 0.3s ease; /* Efek transisi untuk semua perubahan */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan ringan */
+    transition: all 0.3s ease;
+    /* Efek transisi untuk semua perubahan */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Menambahkan bayangan ringan */
 }
 
 /* Efek Hover */
 .custom-btn:hover {
-    background-color: #0056b3; /* Warna latar belakang lebih gelap saat hover */
-    color: #fff; /* Pastikan teks tetap terang */
-    transform: scale(1.1); /* Membesarkan tombol sedikit saat hover */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Bayangan lebih tajam saat hover */
-    text-decoration: none; /* Menghilangkan underline */
+    background-color: #0056b3;
+    /* Warna latar belakang lebih gelap saat hover */
+    color: #fff;
+    /* Pastikan teks tetap terang */
+    transform: scale(1.1);
+    /* Membesarkan tombol sedikit saat hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    /* Bayangan lebih tajam saat hover */
+    text-decoration: none;
+    /* Menghilangkan underline */
 }
 
 /* Efek Focus */
 .custom-btn:focus {
-    outline: none; /* Menghilangkan outline pada tombol saat fokus */
-    box-shadow: 0 0 0 4px rgba(38, 143, 255, 0.6); /* Memberikan highlight biru terang saat tombol dipilih */
+    outline: none;
+    /* Menghilangkan outline pada tombol saat fokus */
+    box-shadow: 0 0 0 4px rgba(38, 143, 255, 0.6);
+    /* Memberikan highlight biru terang saat tombol dipilih */
 }
 
 /* Efek Aktif (Ketika tombol ditekan) */
 .custom-btn:active {
-    transform: scale(0.98); /* Efek tombol sedikit mengecil saat ditekan */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Mengembalikan bayangan ke ukuran normal */
+    transform: scale(0.98);
+    /* Efek tombol sedikit mengecil saat ditekan */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Mengembalikan bayangan ke ukuran normal */
 }
 
 .hero-section {
-    background-image: url('https://saintpauljember.sch.id/wp-content/uploads/2019/08/kantin.jpg');
+    background-image: url('https://pcr.ac.id/assets/media/pcr_media20181003114353.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -523,36 +639,52 @@ footer p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Memperjelas teks */
+    background: rgba(0, 0, 0, 0.5);
+    /* Memperjelas teks */
     z-index: 1;
 }
 
 /* Memastikan teks berada di atas overlay */
-.hero-section h1, .hero-section p, .hero-section .btn {
+.hero-section h1,
+.hero-section p,
+.hero-section .btn {
     position: relative;
     z-index: 2;
 }
 
 /* Menambahkan font menarik dan efek pada judul */
 .hero-section h1 {
-    font-family: 'Montserrat', sans-serif;  /* Font yang lebih modern */
-    font-size: 70px;  /* Ukuran font lebih besar */
-    font-weight: 900;  /* Tebal */
-    text-transform: uppercase;  /* Mengubah ke huruf kapital */
-    letter-spacing: 5px;  /* Memberikan jarak antar huruf */
-    margin-bottom: 30px;  /* Ruang di bawah teks */
-    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.6);  /* Bayangan teks untuk kesan dramatis */
+    font-family: 'Montserrat', sans-serif;
+    /* Font yang lebih modern */
+    font-size: 70px;
+    /* Ukuran font lebih besar */
+    font-weight: 900;
+    /* Tebal */
+    text-transform: uppercase;
+    /* Mengubah ke huruf kapital */
+    letter-spacing: 5px;
+    /* Memberikan jarak antar huruf */
+    margin-bottom: 30px;
+    /* Ruang di bawah teks */
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.6);
+    /* Bayangan teks untuk kesan dramatis */
 }
 
 /* Menambahkan font menarik pada deskripsi */
 .hero-section p {
     font-family: 'Poppins', sans-serif;
-    font-size: 24px;  /* Ukuran font lebih besar */
-    font-weight: 500;  /* Tidak terlalu tebal */
-    margin-bottom: 40px;  /* Memberikan jarak antara teks dan tombol */
-    letter-spacing: 2px;  /* Jarak antar huruf */
-    line-height: 1.6;  /* Memberikan ruang antar baris */
-    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);  /* Bayangan teks untuk kontras */
+    font-size: 24px;
+    /* Ukuran font lebih besar */
+    font-weight: 500;
+    /* Tidak terlalu tebal */
+    margin-bottom: 40px;
+    /* Memberikan jarak antara teks dan tombol */
+    letter-spacing: 2px;
+    /* Jarak antar huruf */
+    line-height: 1.6;
+    /* Memberikan ruang antar baris */
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+    /* Bayangan teks untuk kontras */
 }
 
 /* Efek hover untuk tombol */
@@ -562,11 +694,14 @@ footer p {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     border-radius: 30px;
-    background-color: #cc9900;  /* Warna tombol lebih menarik */
+    background-color: #cc9900;
+    /* Warna tombol lebih menarik */
     color: white;
     text-decoration: none;
-    text-transform: uppercase;  /* Mengubah teks tombol ke kapital */
-    letter-spacing: 2px;  /* Memberikan jarak antar huruf pada tombol */
+    text-transform: uppercase;
+    /* Mengubah teks tombol ke kapital */
+    letter-spacing: 2px;
+    /* Memberikan jarak antar huruf pada tombol */
     transition: all 0.3s ease;
 }
 
@@ -574,12 +709,14 @@ footer p {
 .hero-section .btn:hover {
     background-color: #333;
     transform: scale(1.1);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* Menambahkan bayangan saat hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Menambahkan bayangan saat hover */
 }
 
 /* Styling Footer */
 footer {
-    background-color: #1a1a1a; /* Darker background */
+    background-color: #1a1a1a;
+    /* Darker background */
     color: #fff;
     padding: 50px 0;
     position: relative;
@@ -600,7 +737,8 @@ footer h5 {
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 20px;
-    color: #e6b800; /* Golden color for titles */
+    color: #e6b800;
+    /* Golden color for titles */
 }
 
 /* Paragraph Styling */
@@ -609,8 +747,10 @@ footer p {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.6;
-    color: #d1d1d1; /* Lighter text color */
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for better visibility */
+    color: #d1d1d1;
+    /* Lighter text color */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    /* Subtle shadow for better visibility */
 }
 
 /* Links Styling */
@@ -622,8 +762,10 @@ footer a {
 }
 
 footer a:hover {
-    color: #e6b800; /* Gold on hover */
-    transform: translateX(5px); /* Slight hover effect */
+    color: #e6b800;
+    /* Gold on hover */
+    transform: translateX(5px);
+    /* Slight hover effect */
 }
 
 /* Social Icons */
@@ -634,8 +776,10 @@ footer a:hover {
 }
 
 .social-icons a:hover {
-    transform: scale(1.2); /* Enlarge the icon on hover */
-    color: #e6b800; /* Gold color on hover */
+    transform: scale(1.2);
+    /* Enlarge the icon on hover */
+    color: #e6b800;
+    /* Gold color on hover */
 }
 
 /* Footer Divider */
@@ -660,6 +804,7 @@ footer .social-icons a {
         opacity: 0;
         transform: translateY(50px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -667,12 +812,19 @@ footer .social-icons a {
 }
 
 @keyframes bounceIn {
-    0%, 20%, 50%, 80%, 100% {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
         transform: translateY(0);
     }
+
     40% {
         transform: translateY(-10px);
     }
+
     60% {
         transform: translateY(-5px);
     }
@@ -682,6 +834,7 @@ footer .social-icons a {
     list-style-type: none;
     padding: 0;
 }
+
 .ingredients-list li {
     background-color: #f8f8f8;
     margin: 10px 0;
@@ -689,6 +842,7 @@ footer .social-icons a {
     border: 1px solid #ddd;
     border-radius: 4px;
 }
+
 .ingredients-list li strong {
     color: #007BFF;
 }

@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Slider extends Model
 {
     use HasFactory;
-    protected $table = 'slider';
+    protected $table = 'sliders';
     public $timestamps = false;
     protected $fillable = [
         'gambar_slider'
