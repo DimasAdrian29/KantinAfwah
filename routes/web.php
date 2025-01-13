@@ -4,15 +4,47 @@ use App\Http\Controllers\GaleryController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PromoController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MenuController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\KutipanController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\QuestionAnswerController;
 use App\Http\Controllers\LandingController;
 
+
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/menu', function () {
+    return view('menu');
+});
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+
+Route::resource('menu', MenuController::class);
+
+Route::resource('about', AboutController::class);
+
+// Route::get('/aboutus', function () {
+//     return view('about');
+// });
+
+// Route::get('/aboutus', function () {
+//     return view('about');
+// });
+
+Route::resource('kutipan', KutipanController::class);
+
 
 Route::get('/kantinafwah', [HomeController::class, 'home'])->name('KantinAfwah.home');
 Route::get('/career', [HomeController::class, 'career'])->name('KantinAfwah.career');

@@ -14,8 +14,18 @@
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
+
+
                     </x-nav-link>
-                </div>
+                    <x-nav-link :href="route('menu.index')" :active="request()->routeIs('menu.index')">
+                        {{ __('Menu') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('about.index')" :active="request()->routeIs('about.index')">
+                        {{ __('About') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('kutipan.index')" :active="request()->routeIs('kutipan.index')">
+                        {{ __('Kutipan') }}
+                    </x-nav-link>
             </div>
 
             <!-- Settings Dropdown -->
