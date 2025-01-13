@@ -1,0 +1,694 @@
+
+/* Mengatur kelas .active agar menambahkan garis bawah */
+.navbar-nav .nav-link.active {
+    border-bottom: 2px solid #000;  /* Warna garis bawah */
+    font-weight: bold;  /* Opsional: menebalkan teks link yang aktif */
+}
+/* Reset dasar dan pengaturan font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #007bff;
+    background-color: transparent;
+            box-shadow: none;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    margin-left: 15px;
+    font-size: 16px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffcc00;
+}
+
+/* Hero Section Styling */
+.hero {
+    background-image: url('images/restaurant-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #f8f9fa;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5);
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #f8f9fa;
+    font-style: italic;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5);
+}
+
+.hero .btn {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.hero .btn:hover {
+    background-color: #e6b800;
+}
+
+.hero img {
+    max-width: 300px;
+    border-radius: 8px; /* Jika ingin memberikan efek sudut melengkung pada gambar */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Efek bayangan agar gambar lebih menonjol */
+}
+
+.img-hover-effect {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.img-hover-effect:hover {
+    transform: scale(1.1); /* Memperbesar gambar sedikit saat hover */
+    opacity: 0.8; /* Menurunkan opasitas gambar saat hover */
+}
+
+/* About Us Section */
+#about {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #fff;
+}
+
+#about h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+#about p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Menu Section */
+/* Section Menu */
+.menu-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.menu-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #343a40;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.menu-item {
+    text-align: center;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.menu-item:hover {
+    transform: scale(1.05); /* Slightly scale up when hovered */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+}
+
+.menu-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-img:hover {
+    transform: scale(1.05); /* Scale image on hover */
+    filter: brightness(80%); /* Slightly darken image on hover */
+}
+
+.menu-item h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #343a40;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.menu-item p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+/* Button Styling */
+.btn-custom {
+    padding: 12px 35px;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    background-color: #e6b800;
+    color: rgb(249, 249, 249);
+    border-radius: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #343a40;
+    transform: scale(1.1);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+    .menu-section {
+        padding: 60px 20px;
+    }
+    .menu-item h3 {
+        font-size: 20px;
+    }
+    .menu-item p {
+        font-size: 14px;
+    }
+}
+
+
+
+.about-section {
+    background-color: #f8f9fa; /* Light background color */
+    padding: 60px 0; /* Padding to add some space around */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.about-section:hover {
+    transform: scale(1.02); /* Slightly scale up when hovered */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow effect */
+}
+
+.about-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #343a40;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.about-section p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: #6c757d;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.about-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-section ul li {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #495057;
+    margin-bottom: 10px;
+}
+
+.about-section ul li i {
+    color: #28a745; /* Green check icon */
+    margin-right: 10px;
+}
+
+.custom-btn {
+    padding: 12px 35px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-image {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 767px) {
+    .about-section {
+        padding: 40px 20px;
+    }
+    .about-section h2 {
+        font-size: 28px;
+    }
+    .about-section p {
+        font-size: 16px;
+    }
+}
+
+#login .btn {
+    display: inline-block; /* Membuat tombol seperti elemen inline */
+    justify-content: flex-end;
+    margin: 0;
+    background-color: #e6b800; /* Warna latar belakang tombol */
+    color: #333; /* Warna teks */
+    padding: 12px 20px; /* Padding tombol */
+    font-size: 14px; /* Ukuran font tombol */
+    border: none; /* Tanpa border */
+    border-radius: 5px; /* Sudut tombol melengkung */
+    text-transform: uppercase; /* Membuat teks menjadi huruf kapital */
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    transition: background-color 0.3s, transform 0.3s; /* Transisi halus untuk perubahan warna dan efek */
+}
+
+/* Mengatur tombol Register */
+#register .btn {
+    display: inline-block; /* Membuat tombol seperti elemen inline */
+    justify-content: flex-end;
+    margin: 0;
+    background-color: #e6b800; /* Warna latar belakang tombol */
+    color: #333; /* Warna teks */
+    padding: 12px 20px; /* Padding tombol */
+    font-size: 14px; /* Ukuran font tombol */
+    border: none; /* Tanpa border */
+    border-radius: 5px; /* Sudut tombol melengkung */
+    text-transform: uppercase; /* Membuat teks menjadi huruf kapital */
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    transition: background-color 0.3s, transform 0.3s; /* Transisi halus untuk perubahan warna dan efek */
+}
+
+/* Menambahkan jarak antara tombol Login dan Register */
+#login ul, #register ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+}
+
+#login li, #register li {
+    margin-right: 20px; /* Memberikan jarak antara tombol Login dan Register */
+}
+
+/* Efek hover saat kursor diarahkan ke tombol */
+#login .btn:hover, #register .btn:hover {
+    background-color: #cc9900; /* Warna latar belakang saat hover */
+    transform: translateY(-3px); /* Efek angkat tombol saat hover */
+    color: #fff; /* Mengubah warna teks menjadi putih */
+}
+/* Contact Section */
+#contact {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+#contact p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #007bff;
+    color:#000;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 16px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 14px;
+    }
+
+    #menu .row {
+        flex-direction: column;
+    }
+
+    #menu .col-md-4 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #about p {
+        font-size: 16px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+}
+.navbar-brand {
+    position: absolute;
+    right: 20px; /* Sesuaikan jarak dari kanan */
+}
+
+.dropdown-menu {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    border: 1px solid #ddd;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    transform: translateY(20px);
+}
+
+/* Menampilkan dropdown saat aktif */
+.dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Styling untuk item dropdown */
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    font-size: 16px;
+    color: #333;
+    border-radius: 6px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+/* Hover effect untuk item dropdown */
+.dropdown-item:hover {
+    background-color: #f5f5f5;
+    transform: translateX(5px); /* Efek sedikit geser ke kanan */
+}
+
+/* Styling untuk ikon di dalam dropdown */
+.dropdown-item i {
+    margin-right: 15px;
+    font-size: 22px; /* Ukuran ikon yang lebih besar */
+    transition: transform 0.2s ease;
+}
+
+/* Hover effect untuk ikon */
+.dropdown-item:hover i {
+    transform: scale(1.2); /* Membesarkan ikon sedikit */
+}
+
+/* Dropdown Hover */
+.nav-item.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Styling untuk navbar */
+.navbar {
+    background-color: #f8f9fa;
+}
+
+.custom-btn {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 30px;
+    border-radius: 30px; /* Membuat tombol lebih bulat */
+    background-color: #007bff; /* Warna awal tombol */
+    color: white; /* Warna teks */
+    text-align: center;
+    text-decoration: none; /* Menghilangkan underline */
+    display: inline-block;
+    transition: all 0.3s ease; /* Efek transisi untuk semua perubahan */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan ringan */
+}
+
+/* Efek Hover */
+.custom-btn:hover {
+    background-color: #0056b3; /* Warna latar belakang lebih gelap saat hover */
+    color: #fff; /* Pastikan teks tetap terang */
+    transform: scale(1.1); /* Membesarkan tombol sedikit saat hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Bayangan lebih tajam saat hover */
+    text-decoration: none; /* Menghilangkan underline */
+}
+
+/* Efek Focus */
+.custom-btn:focus {
+    outline: none; /* Menghilangkan outline pada tombol saat fokus */
+    box-shadow: 0 0 0 4px rgba(38, 143, 255, 0.6); /* Memberikan highlight biru terang saat tombol dipilih */
+}
+
+/* Efek Aktif (Ketika tombol ditekan) */
+.custom-btn:active {
+    transform: scale(0.98); /* Efek tombol sedikit mengecil saat ditekan */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Mengembalikan bayangan ke ukuran normal */
+}
+
+.hero-section {
+    background-image: url('https://saintpauljember.sch.id/wp-content/uploads/2019/08/kantin.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 150px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Menambahkan gradien overlay untuk kontras */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Memperjelas teks */
+    z-index: 1;
+}
+
+/* Memastikan teks berada di atas overlay */
+.hero-section h1, .hero-section p, .hero-section .btn {
+    position: relative;
+    z-index: 2;
+}
+
+/* Menambahkan font menarik dan efek pada judul */
+.hero-section h1 {
+    font-family: 'Montserrat', sans-serif;  /* Font yang lebih modern */
+    font-size: 70px;  /* Ukuran font lebih besar */
+    font-weight: 900;  /* Tebal */
+    text-transform: uppercase;  /* Mengubah ke huruf kapital */
+    letter-spacing: 5px;  /* Memberikan jarak antar huruf */
+    margin-bottom: 30px;  /* Ruang di bawah teks */
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.6);  /* Bayangan teks untuk kesan dramatis */
+}
+
+/* Menambahkan font menarik pada deskripsi */
+.hero-section p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;  /* Ukuran font lebih besar */
+    font-weight: 500;  /* Tidak terlalu tebal */
+    margin-bottom: 40px;  /* Memberikan jarak antara teks dan tombol */
+    letter-spacing: 2px;  /* Jarak antar huruf */
+    line-height: 1.6;  /* Memberikan ruang antar baris */
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);  /* Bayangan teks untuk kontras */
+}
+
+/* Efek hover untuk tombol */
+.hero-section .btn {
+    padding: 15px 40px;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border-radius: 30px;
+    background-color: #cc9900;  /* Warna tombol lebih menarik */
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;  /* Mengubah teks tombol ke kapital */
+    letter-spacing: 2px;  /* Memberikan jarak antar huruf pada tombol */
+    transition: all 0.3s ease;
+}
+
+/* Efek Hover tombol */
+.hero-section .btn:hover {
+    background-color: #333;
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* Menambahkan bayangan saat hover */
+}
+
+/* Styling Footer */
+footer {
+    background-color: #1a1a1a; /* Darker background */
+    color: #fff;
+    padding: 50px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Shadow and Animation for Column */
+footer .col-md-4 {
+    position: relative;
+    z-index: 2;
+}
+
+/* Title Styling */
+footer h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: #e6b800; /* Golden color for titles */
+}
+
+/* Paragraph Styling */
+footer p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #d1d1d1; /* Lighter text color */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for better visibility */
+}
+
+/* Links Styling */
+footer a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer a:hover {
+    color: #e6b800; /* Gold on hover */
+    transform: translateX(5px); /* Slight hover effect */
+}
+
+/* Social Icons */
+.social-icons a {
+    font-size: 24px;
+    color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2); /* Enlarge the icon on hover */
+    color: #e6b800; /* Gold color on hover */
+}
+
+/* Footer Divider */
+footer hr {
+    border-top: 1px solid #444;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Animation for Footer Elements */
+footer .col-md-4 {
+    animation: fadeInUp 1s ease-out;
+}
+
+footer .social-icons a {
+    animation: bounceIn 1s ease-out infinite;
+}
+
+/* Keyframe Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.ingredients-list {
+    list-style-type: none;
+    padding: 0;
+}
+.ingredients-list li {
+    background-color: #f8f8f8;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.ingredients-list li strong {
+    color: #007BFF;
+}
