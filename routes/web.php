@@ -9,7 +9,6 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\KutipanController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SliderController;
-use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\QuestionAnswerController;
 use App\Http\Controllers\LandingController;
 
