@@ -35,12 +35,25 @@ class AboutController extends Controller
             'kontak' => 'required|string|max:255',
             'email' => 'required|string|max:255',
             'alamat' => 'required|string|max:255',
+            'gambar_kantin' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+            'deskripsi_kantin'  => 'required|string',
+            'gambar_pemilik' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+            'deskripsi_pemilik'  => 'required|string',
         ]);
 
         $about = new About();
         $about->kontak = $request->kontak;
         $about->email = $request->email;
         $about->alamat = $request->alamat;
+        $about->deskripsi_pemilik = $request->deskripsi_pemilik;
+        $about->deskripsi_kantin = $request->deskripsi_kantin;
+
+        if ($request->hasFile('gambar_kantin')) {
+            $about->gambar_kantin = $request->file('gambar_kantin')->store('images', 'public');
+        }
+        if ($request->hasFile('gambar_pemilik')) {
+            $about->gambar_pemilik = $request->file('gambar_pemilik')->store('images', 'public');
+        }
 
         $about->save();
 
@@ -72,12 +85,25 @@ class AboutController extends Controller
             'kontak' => 'required|string|max:255',
             'alamat' => 'required|string|max:255',
             'email' => 'required|string|max:255',
+            'gambar_kantin' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+            'deskripsi_kantin'  => 'required|string',
+            'gambar_pemilik' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+            'deskripsi_pemilik'  => 'required|string',
         ]);
 
 
         $about->kontak = $request->kontak;
         $about->email = $request->email;
         $about->alamat = $request->alamat;
+        $about->deskripsi_pemilik = $request->deskripsi_pemilik;
+        $about->deskripsi_kantin = $request->deskripsi_kantin;
+
+        if ($request->hasFile('gambar_kantin')) {
+            $about->gambar_kantin = $request->file('gambar_kantin')->store('images', 'public');
+        }
+        if ($request->hasFile('gambar_pemilik')) {
+            $about->gambar_pemilik = $request->file('gambar_pemilik')->store('images', 'public');
+        }
 
         $about->save();
 
@@ -89,7 +115,6 @@ class AboutController extends Controller
      */
     public function destroy(About $about)
     {
-        $about->delete();
-        return redirect()->route('about.index')->with('success', 'about berhasil dihapus!');
+
     }
 }

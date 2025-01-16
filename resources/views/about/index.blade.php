@@ -15,35 +15,21 @@
             <h1>Kantin Afwah</h1>
         </div>
     </header>
-
+    @foreach ($about as $item)
     <section id="about" class="about-us">
         <div class="container">
             <div class="text-with-image">
-                <img src="{{ asset('kantinRandom.png') }}" alt="Deskripsi Gambar">
-                <p>
-                    Kantin ini memiliki berbagai jenis makanan dan minuman. memiliki berbagai jenis makanan dan minuman.
-                    memiliki berbagai jenis makanan dan minuman.memiliki berbagai jenis makanan dan minuman.memiliki
-                    berbagai jenis makanan dan minuman.memiliki berbagai jenis makanan dan minuman.memiliki
-                    berbagai jenis makanan dan minuman
-                </p>
+                <img src="{{ asset('storage/' . $item->gambar_kantin) }}" alt="Deskripsi Gambar">
+                <p>{{ $item->deskripsi_kantin }}</p>
             </div>
             <br><br><br>
             <h3>Kenalan sama pemilik nya, Yuk!</h3>
             <div class="text-with-image">
-
-                <p>
-                    Fulanah, seorang ibu rumah tangga yang bla bla bla bla, memiliki berbagai jenis makanan dan minuman.memiliki
-                    berbagai jenis makanan dan minuman.memiliki berbagai jenis makanan dan minuman.memiliki
-                    berbagai jenis makanan dan minuman. memiliki berbagai jenis makanan dan minuman.memiliki
-                    berbagai jenis makanan dan minuman
-                </p>
-                <img src="{{ asset('pemilikKantin.png') }}" alt="Deskripsi Gambar">
+                <p>{{ $item->deskripsi_pemilik }}</p>
+                <img src="{{ asset('storage/' . $item->gambar_pemilik) }}" alt="Deskripsi Gambar">
             </div>
-
             <div class="profile-info">
-
                 <br>
-
                 <header>
                     <h3>Contact Information</h3>
                 </header>
@@ -56,13 +42,11 @@
                         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
-                    @foreach ($about as $item)
                     <ul>
                         <li><strong>Location:</strong>{{ $item->alamat }}</li>
                         <li><strong>Phone:</strong>{{ $item->kontak }}</li>
                         <li><strong>Email:</strong>{{ $item->email }}</li>
                     </ul>
-                    @endforeach
                 </div>
             </div>
         </div>
@@ -70,6 +54,8 @@
     <a href="{{ route('about.edit', $item->id) }}" class="inline-block bg-blue-500 text-white px-4 py-2 rounded mb-4">
         Edit
     </a>
+
+    @endforeach
     <footer>
         <div class="container">
             <p>&copy; 2024 Kantin Afwan. All Rights Reserved.</p>
