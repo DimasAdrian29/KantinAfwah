@@ -14,7 +14,7 @@ class SliderController extends Controller
 
     public function index()
     {
-        // Mengambil semua data slider dari tabel sliders
+      // Mengambil sua data slider dari tabel sliders
         $sliders = Slider::all();
 
         // Mengembalikan view 'sliders.index' dan mengirim data slider ke view

@@ -7,12 +7,20 @@
     <title>Kantin Afwah</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ mix('resources/css/style.css') }}" rel="stylesheet">
+    <link href="{{ mix('assets/css/style.css') }}" rel="stylesheet">
+   <link href="{{ mix('assets/css/responsive.css') }}" rel="stylesheet">
+   <link href="{{ mix('assets/css/color.css') }}" rel="stylesheet">
+   <link href="{{ mix('assets/css/fontawesome.min.css') }}" rel="stylesheet">
+   <link href="{{ mix('assets/css/jquery.fancybox.min.css') }}" rel="stylesheet">
+   <link href="{{ mix('assets/css/owl.theme.default.min.css') }}" rel="stylesheet">
+   <link href="{{ mix('assets/css/owl.carousel.min.css') }}" rel="stylesheet">
+   <link href="{{ mix('assets/css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Tambahkan CDN Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
-    {{-- @include('KantinAfwah.navbar') --}}
+    @include('KantinAfwah.home')
     @yield('content')
     {{-- <div class="grid lg:grid-cols-3 grid-cols-1 gap-6 lg:py-16 py-14 aos-init aos-animate" data-aos="fade-up">
         <div>
