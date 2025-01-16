@@ -17,5 +17,9 @@ class About extends Model
         'email',
         'alamat',
         'kontak',
+        'gambar_kantin',
+        'deskripsi_kantin',
+        'gambar_pemilik',
+        'deskripsi_pemilik'
     ];
 }
