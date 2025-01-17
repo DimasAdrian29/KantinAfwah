@@ -202,54 +202,33 @@
                     <h2>Kutipan</h2>
                     <div class="line"></div>
                 </div>
-                <div class="col-xl-6">
-                    <div class="about-text">
-                    </div>
-                </div>
             </div>
             <div class="row mt-5">
-                <div class="col-xl-4 col-lg-6">
-                    <div class="restaurant-card">
-                        <img alt="Restaurant-img" class="w-100" src="assets/img/restaurant.jpg">
-                        <div class="restaurant-span">
-                            <span>Restaurant</span>
-                        </div>
-                        <div class="coctail-bar">
-                            <h5>Restaurant</h5>
-                            <p>Nisl quam nestibulum ac quam nec aucan ligula. Orci varius natoque li um ac quam nec odio
-                                rbine.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6">
-                    <div class="restaurant-card coctail">
-                        <img alt="Restaurant-img" class="w-100" src="assets/img/restaurant-2.jpg">
-                        <div class="restaurant-span">
-                            <span>Coctail Bar</span>
-                        </div>
-                        <div class="coctail-bar">
-                            <h5>Coctail Bar</h5>
-                            <p>Nisl quam nestibulum ac quam nec aucan ligula. Orci varius natoque li um ac quam nec odio
-                                rbine.</p>
+                @foreach ($kutipan as $index => $item)
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="restaurant-card">
+                            <!-- Menampilkan gambar kutipan -->
+                            @if ($item->gambar)
+                                <img alt="Kutipan-img" class="w-100" src="{{ Storage::url($item->gambar) }}">
+                            @else
+                                <img alt="Default-img" class="w-100" src="assets/img/default-image.jpg">
+                                <!-- Gambar default jika tidak ada gambar -->
+                            @endif
+
+                            <div class="restaurant-span">
+                                <span>{{ $item->judul }}</span> <!-- Menampilkan judul kutipan -->
+                            </div>
+                            <div class="coctail-bar">
+                                <h5>{{ $item->judul }}</h5> <!-- Menampilkan judul kutipan -->
+                                <p>{{ $item->isi_kutipan }}</p> <!-- Menampilkan isi kutipan -->
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-4 col-lg-6">
-                    <div class="restaurant-card">
-                        <img alt="Restaurant-img" class="w-100" src="assets/img/restaurant-3.jpg">
-                        <div class="restaurant-span">
-                            <span>Private Dining</span>
-                        </div>
-                        <div class="coctail-bar">
-                            <h5>Private Dining</h5>
-                            <p>Nisl quam nestibulum ac quam nec aucan ligula. Orci varius natoque li um ac quam nec odio
-                                rbine.</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
+
     <section class="gap section-featured" style="background-color: #f5f8fd;">
         <div class="container">
             <div class="heading-two">

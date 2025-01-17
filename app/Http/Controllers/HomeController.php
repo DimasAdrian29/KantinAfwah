@@ -7,13 +7,15 @@ use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
 use App\Models\Slider;
+use App\Models\Kutipan;
 
 class HomeController extends Controller
 {
     public function home()
     {
         $sliders = Slider::all();
-        return view('KantinAfwah.home', compact('sliders'));
+        $kutipan = Kutipan::all();
+        return view('KantinAfwah.home', compact('sliders' , 'kutipan'));
     }
     public function ourbrands()
     {
