@@ -8,6 +8,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\QuestionAnswerController;
 use App\Http\Controllers\LandingController;
+use App\Http\Controllers\KutipanController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -16,7 +17,7 @@ Route::get('/', function () {
 Route::get('/kantinafwah', [HomeController::class, 'home'])->name('KantinAfwah.home');
 Route::get('/career', [HomeController::class, 'career'])->name('KantinAfwah.career');
 Route::get('/about_us', [HomeController::class, 'about_us'])->name('KantinAfwah.about_us');
-Route::get('/news', [HomeController::class, 'news'])->name('KantinAfwah.news');
+Route::get('/gallery', [HomeController::class, 'gallery'])->name('KantinAfwah.gallery');
 Route::get('/ourbrands', [HomeController::class, 'ourbrands'])->name('KantinAfwah.ourbrands');
 Route::get('/login', [HomeController::class, 'login'])->name('KantinAfwah.login');
 Route::get('/register', [HomeController::class, 'register'])->name('KantinAfwah.register');
@@ -37,6 +38,8 @@ Route::resource('question_answer', QuestionAnswerController::class)->only(['inde
 Route::get('/landing', [LandingController::class, 'index'])->name('home');
 Route::resource('galery', GaleryController::class)->only(['create','index', 'store', 'edit', 'update', 'destroy']);
 Route::resource('promo', PromoController::class)->only(['create','index', 'store', 'edit', 'update', 'destroy']);
+
+Route::resource('kutipan', KutipanController::class);
 
 require __DIR__.'/auth.php';
 
