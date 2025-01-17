@@ -39,7 +39,7 @@ Route::get('/landing', [LandingController::class, 'index'])->name('home');
 Route::resource('galery', GaleryController::class)->only(['create','index', 'store', 'edit', 'update', 'destroy']);
 Route::resource('promo', PromoController::class)->only(['create','index', 'store', 'edit', 'update', 'destroy']);
 
-Route::resource('kutipan', KutipanController::class);
+Route::resource('kutipan', KutipanController::class)->only(['index', 'store','destroy','create','edit','update']);
 
 require __DIR__.'/auth.php';
 

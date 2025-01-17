@@ -23,9 +23,9 @@ class HomeController extends Controller
     {
         return view('KantinAfwah.about');
     }
-    public function footer()
+    public function gallery()
     {
-        return view('KantinAfwah.footer');
+        return view('KantinAfwah.gallery');
     }
     public function career()
     {

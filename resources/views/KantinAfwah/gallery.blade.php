@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="zxx">
 
-<!-- Mirrored from winsfolio.net/html/foodio/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Nov 2024 11:35:43 GMT -->
+<!-- Mirrored from winsfolio.net/html/foodio/our-blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Nov 2024 11:36:39 GMT -->
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foodio - Home 1</title>
+    <title>Foodio - Our blog</title>
     <link rel="icon" href="assets/img/logo-icon.png">
     <!-- CSS only -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
@@ -179,210 +179,124 @@
             </div>
         </div>
     </header>
-    <section class="slider-hero">
-        <div class="slider-home-1 owl-carousel owl-theme">
-            @foreach ($sliders as $index => $slider)
-                <div class="hero-section item"
-                    style="background-image: url('{{ Storage::url($slider->gambar_slider) }}')">
-                    <div class="container">
-                        <div class="row align-items-end">
-                            <div class="col-xl-6">
+    <section class="banner" style="background-image:url(assets/img/background.png)">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="title-area-data">
+                        <h2>Our Blog</h2>
+                        <p>A magical combination that sent aromas to the taste buds</p>
+                    </div>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">News</li>
+                        <li class="breadcrumb-item active" aria-current="page">Our Blog</li>
+                    </ol>
+                </div>
+                <div class="col-lg-5">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="title-area-img">
+                                <img alt="title-area-img" src="assets/img/title-area-img-1.jpg">
+                                <img alt="pata" class="pata" src="assets/img/pata.png">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="title-area-img two">
+                                <img alt="title-area-img" src="assets/img/title-area-img-2.jpg">
                             </div>
                         </div>
                     </div>
                 </div>
-            @endforeach
+            </div>
         </div>
     </section>
-
-    <section class="gap">
+    <section class="gap our-blog">
         <div class="container">
             <div class="row">
-                <div class="heading-two">
-                    <h2>Kutipan</h2>
-                    <div class="line"></div>
-                </div>
-                <div class="col-xl-6">
-                    <div class="about-text">
+                <div class="col-xl-8">
+                    <div class="recent-news-two">
+                        <img alt="recent-news-img" src="assets/img/recent-news-6.jpg">
+                        <div class="recent-news mt-3">
+                            <div>
+                                <a href="#"><span>29 December, 2023</span></a>
+                                <a href="blog-details.html">
+                                    <h2>Tender fried baby squid with a salt, pepper</h2>
+                                </a>
+                                <div class="d-flex align-items-center"><img alt="img" class="me-3"
+                                        src="assets/img/man.jpg">
+                                    <h6>by Thomas Walimes</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recent-news-two">
+                        <img alt="recent-news-img" src="assets/img/recent-news-7.jpg">
+                        <div class="recent-news mt-3">
+                            <div>
+                                <a href="#"><span>29 December, 2023</span></a>
+                                <a href="blog-details.html">
+                                    <h2>Operates approximately 400 restaurants</h2>
+                                </a>
+                                <div class="d-flex align-items-center"><img alt="img" class="me-3"
+                                        src="assets/img/man.jpg">
+                                    <h6>by Thomas Walimes</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recent-news-two">
+                        <img alt="recent-news-img" src="assets/img/recent-news-8.jpg">
+                        <div class="recent-news mt-3">
+                            <div>
+                                <a href="#"><span>29 December, 2023</span></a>
+                                <a href="blog-details.html">
+                                    <h2>Eclectic and imaginative menu in the restaurant</h2>
+                                </a>
+                                <div class="d-flex align-items-center"><img alt="img" class="me-3"
+                                        src="assets/img/man.jpg">
+                                    <h6>by Thomas Walimes</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recent-news-two">
+                        <img alt="recent-news-img" src="assets/img/recent-news-9.jpg">
+                        <div class="recent-news mt-3">
+                            <div>
+                                <a href="#"><span>29 December, 2023</span></a>
+                                <a href="blog-details.html">
+                                    <h2>Menus for your event, inspired equally</h2>
+                                </a>
+                                <div class="d-flex align-items-center"><img alt="img" class="me-3"
+                                        src="assets/img/man.jpg">
+                                    <h6>by Thomas Walimes</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recent-news-two">
+                        <img alt="recent-news-img" src="assets/img/recent-news-3.jpg">
+                        <div class="recent-news mt-3">
+                            <div>
+                                <a href="#"><span>29 December, 2023</span></a>
+                                <a href="blog-details.html">
+                                    <h2>Flowers, candles and menu cards are provided</h2>
+                                </a>
+                                <div class="d-flex align-items-center"><img alt="img" class="me-3"
+                                        src="assets/img/man.jpg">
+                                    <h6>by Thomas Walimes</h6>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row mt-5">
-                <div class="col-xl-4 col-lg-6">
-                    <div class="restaurant-card">
-                        <img alt="Restaurant-img" class="w-100" src="assets/img/restaurant.jpg">
-                        <div class="restaurant-span">
-                            <span>Restaurant</span>
-                        </div>
-                        <div class="coctail-bar">
-                            <h5>Restaurant</h5>
-                            <p>Nisl quam nestibulum ac quam nec aucan ligula. Orci varius natoque li um ac quam nec odio
-                                rbine.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6">
-                    <div class="restaurant-card coctail">
-                        <img alt="Restaurant-img" class="w-100" src="assets/img/restaurant-2.jpg">
-                        <div class="restaurant-span">
-                            <span>Coctail Bar</span>
-                        </div>
-                        <div class="coctail-bar">
-                            <h5>Coctail Bar</h5>
-                            <p>Nisl quam nestibulum ac quam nec aucan ligula. Orci varius natoque li um ac quam nec odio
-                                rbine.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6">
-                    <div class="restaurant-card">
-                        <img alt="Restaurant-img" class="w-100" src="assets/img/restaurant-3.jpg">
-                        <div class="restaurant-span">
-                            <span>Private Dining</span>
-                        </div>
-                        <div class="coctail-bar">
-                            <h5>Private Dining</h5>
-                            <p>Nisl quam nestibulum ac quam nec aucan ligula. Orci varius natoque li um ac quam nec odio
-                                rbine.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        </div>
         </div>
     </section>
-    <section class="gap section-featured" style="background-color: #f5f8fd;">
-        <div class="container">
-            <div class="heading-two">
-                <h2>Menu Favorit</h2>
-                <div class="line"></div>
-            </div>
-            <div class="row dishes owl-carousel owl-theme">
-                <div class="item col-xl-12">
-                    <div class="featured-dishes">
-                        <div class="featured-dishes-img">
-                            <img alt="featured-dishes" src="assets/img/featured-dishes-1.png">
-                        </div>
-                        <ul class="star">
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                        </ul>
-                        <a href="product-details.html">
-                            <h5>Brown Sandwich</h5>
-                        </a>
-                        <p><span>$</span>10.85</p>
-                        <a href="cart-checkout.html">
-                            <i><svg enable-background="new 0 0 512 512" viewBox="0 0 512 512"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g>
-                                        <path
-                                            d="m452 120h-60.946c-7.945-67.478-65.477-120-135.054-120s-127.109 52.522-135.054 120h-60.946c-11.046 0-20 8.954-20 20v352c0 11.046 8.954 20 20 20h392c11.046 0 20-8.954 20-20v-352c0-11.046-8.954-20-20-20zm-196-80c47.484 0 87.019 34.655 94.659 80h-189.318c7.64-45.345 47.175-80 94.659-80zm176 432h-352v-312h40v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h192v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h40z">
-                                        </path>
-                                    </g>
-                                </svg></i></a>
-                    </div>
-                </div>
-                <div class="item col-xl-12">
-                    <div class="featured-dishes">
-                        <div class="sale">
-                            <h6>Sale</h6>
-                        </div>
-                        <div class="featured-dishes-img">
-                            <img alt="featured-dishes" src="assets/img/featured-dishes-2.png">
-                        </div>
-                        <ul class="star">
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                        </ul>
-                        <a href="product-details.html">
-                            <h5>Banana Leaves</h5>
-                        </a>
-                        <div class="d-flex">
-                            <p><span>$</span>10.85</p>
-                            <del>$14.5</del>
-                        </div>
-                        <a href="cart-checkout.html">
-                            <i><svg enable-background="new 0 0 512 512" viewBox="0 0 512 512"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g>
-                                        <path
-                                            d="m452 120h-60.946c-7.945-67.478-65.477-120-135.054-120s-127.109 52.522-135.054 120h-60.946c-11.046 0-20 8.954-20 20v352c0 11.046 8.954 20 20 20h392c11.046 0 20-8.954 20-20v-352c0-11.046-8.954-20-20-20zm-196-80c47.484 0 87.019 34.655 94.659 80h-189.318c7.64-45.345 47.175-80 94.659-80zm176 432h-352v-312h40v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h192v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h40z">
-                                        </path>
-                                    </g>
-                                </svg></i></a>
-                    </div>
-                </div>
-                <div class="item col-xl-12">
-                    <div class="featured-dishes">
-                        <div class="featured-dishes-img">
-                            <img alt="featured-dishes" src="assets/img/featured-dishes-3.png">
-                        </div>
-                        <ul class="star">
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                        </ul>
-                        <a href="product-details.html">
-                            <h5>Parisian Hamburger</h5>
-                        </a>
-                        <p><span>$</span>10.85</p>
-                        <a href="cart-checkout.html">
-                            <i><svg enable-background="new 0 0 512 512" viewBox="0 0 512 512"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g>
-                                        <path
-                                            d="m452 120h-60.946c-7.945-67.478-65.477-120-135.054-120s-127.109 52.522-135.054 120h-60.946c-11.046 0-20 8.954-20 20v352c0 11.046 8.954 20 20 20h392c11.046 0 20-8.954 20-20v-352c0-11.046-8.954-20-20-20zm-196-80c47.484 0 87.019 34.655 94.659 80h-189.318c7.64-45.345 47.175-80 94.659-80zm176 432h-352v-312h40v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h192v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h40z">
-                                        </path>
-                                    </g>
-                                </svg></i></a>
-                    </div>
-                </div>
-                <div class="item col-xl-12">
-                    <div class="featured-dishes">
-                        <div class="featured-dishes-img">
-                            <img alt="featured-dishes" src="assets/img/featured-dishes-2.png">
-                        </div>
-                        <ul class="star">
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                        </ul>
-                        <a href="product-details.html">
-                            <h5>Parisian Hamburger</h5>
-                        </a>
-                        <p><span>$</span>10.85</p>
-                        <a href="cart-checkout.html">
-                            <i><svg enable-background="new 0 0 512 512" viewBox="0 0 512 512"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g>
-                                        <path
-                                            d="m452 120h-60.946c-7.945-67.478-65.477-120-135.054-120s-127.109 52.522-135.054 120h-60.946c-11.046 0-20 8.954-20 20v352c0 11.046 8.954 20 20 20h392c11.046 0 20-8.954 20-20v-352c0-11.046-8.954-20-20-20zm-196-80c47.484 0 87.019 34.655 94.659 80h-189.318c7.64-45.345 47.175-80 94.659-80zm176 432h-352v-312h40v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h192v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h40z">
-                                        </path>
-                                    </g>
-                                </svg></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div class="gap no-top">
-        <div style="background-image: url(assets/img/follow.jpg)" class="follow">
-            <i class="fa-brands fa-instagram"></i>
-            <a href="#">
-                <h2>Follow @Winsfolio.com</h2>
-            </a>
-            <p>Join our community to inspire your desires</p>
-        </div>
-    </div>
     <footer style="background-image: url(assets/img/footer.png);background-color: #f5f8fd;">
         <div class="container">
             <div class="row">
@@ -453,8 +367,4 @@
     <!-- fancybox -->
     <script src="assets/js/jquery.fancybox.min.js"></script>
     <script src="assets/js/custom.js"></script>
-
-    <!-- Form Script -->
-    <script src="assets/js/contact.js"></script>
-    <script type="text/javascript" src="assets/js/sweetalert.min.js"></script>
 </body>
