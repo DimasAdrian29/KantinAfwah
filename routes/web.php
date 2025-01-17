@@ -11,6 +11,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\QuestionAnswerController;
 use App\Http\Controllers\LandingController;
+use App\Http\Controllers\PesanSaranController;
 
 
 Route::get('/', function () {
@@ -52,6 +53,7 @@ Route::get('/news', [HomeController::class, 'news'])->name('KantinAfwah.news');
 Route::get('/ourbrands', [HomeController::class, 'ourbrands'])->name('KantinAfwah.ourbrands');
 Route::get('/login', [HomeController::class, 'login'])->name('KantinAfwah.login');
 Route::get('/register', [HomeController::class, 'register'])->name('KantinAfwah.register');
+Route::get('/pesandansaran', [HomeController::class, 'pesandansaran'])->name('KantinAfwah.pesandansaran');
 
 
 Route::get('/dashboard', function () {
@@ -70,6 +72,7 @@ Route::get('/landing', [LandingController::class, 'index'])->name('home');
 Route::resource('galery', GaleryController::class)->only(['create','index', 'store', 'edit', 'update', 'destroy']);
 Route::resource('promo', PromoController::class)->only(['create','index', 'store', 'edit', 'update', 'destroy']);
 
+Route::resource('pesanSaran', PesanSaranController::class)->only(['create','index', 'store', 'edit', 'update', 'destroy']);
 require __DIR__.'/auth.php';
 
 

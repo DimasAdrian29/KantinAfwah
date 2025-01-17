@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
 use App\Models\Slider;
+use App\Models\Promo;
+use App\Models\PesanSaran;
 
 class HomeController extends Controller
 {
@@ -22,6 +24,11 @@ class HomeController extends Controller
     public function about_us()
     {
         return view('KantinAfwah.about');
+    }
+    public function pesandansaran()
+    {
+        $pesansaran = PesanSaran::all();
+        return view('KantinAfwah.pesandansaran', compact('pesansaran'));
     }
     public function footer()
     {
