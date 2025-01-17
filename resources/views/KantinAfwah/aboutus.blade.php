@@ -1,7 +1,7 @@
-<html lang="zxx"><!-- Mirrored from winsfolio.net/html/foodio/menu-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Nov 2024 11:36:36 GMT --><head>
+<html lang="zxx"><!-- Mirrored from winsfolio.net/html/foodio/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Nov 2024 11:36:34 GMT --><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foodio - Menu 3</title>
+    <title>Foodio - About</title>
     <link rel="icon" href="assets/img/logo-icon.png">
     <!-- CSS only -->
      <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
@@ -20,6 +20,51 @@
       <!-- jQuery -->
      <script src="assets/js/jquery-3.6.0.min.js"></script>
      <script src="assets/js/preloader.js"></script>
+<style>
+    .about-img {
+    width: 150px; /* Adjust this value as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make the image circular */
+    margin-right: 20px; /* Add spacing between image and text */
+}
+/* CSS Grid Setup */
+.grid {
+    display: grid;
+}
+
+/* Adjust column count for different screen sizes */
+@media (min-width: 768px) {
+    .grid-cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Image Styling */
+.history-img {
+    width: 100%;
+    max-width: 400px; /* Set a maximum width for the image */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.history {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+</style>
+
    </head>
   <body class="page-loaded">
   <!-- preloader -->
@@ -51,11 +96,21 @@
               </div>
               <div class="col-xl-6">
                  <div class="d-flex align-items-center login">
-
+                 <div class="header-social-media">
+                    <a href="#">
+                       Facebook
+                    </a>
+                    <a href="#">
+                       Instagram
+                    </a>
+                    <a href="#">
+                       Youtube
+                    </a>
+                 </div>
                  <div class="register">
                     <i>
                        <svg clip-rule="evenodd" fill-rule="evenodd" height="512" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 32 32" width="512" xmlns="http://www.w3.org/2000/svg"><g id="Approved-User"><path d="m10.105 22.3c.21-.482.511-.926.89-1.305.797-.797 1.878-1.245 3.005-1.245h4c1.127 0 2.208.448 3.005 1.245.379.379.68.823.89 1.305.166.379.608.553.988.387.379-.165.553-.608.387-.987-.285-.653-.691-1.253-1.204-1.766-1.078-1.078-2.541-1.684-4.066-1.684-1.3 0-2.7 0-4 0-1.525 0-2.988.606-4.066 1.684-.513.513-.919 1.113-1.204 1.766-.166.379.008.822.387.987.38.166.822-.008.988-.387z"></path><path d="m16 8.25c-3.174 0-5.75 2.576-5.75 5.75s2.576 5.75 5.75 5.75 5.75-2.576 5.75-5.75-2.576-5.75-5.75-5.75zm0 1.5c2.346 0 4.25 1.904 4.25 4.25s-1.904 4.25-4.25 4.25-4.25-1.904-4.25-4.25 1.904-4.25 4.25-4.25z"></path><path d="m26.609 12.25c.415 1.173.641 2.435.641 3.75 0 6.209-5.041 11.25-11.25 11.25s-11.25-5.041-11.25-11.25 5.041-11.25 11.25-11.25c1.315 0 2.577.226 3.75.641.39.138.819-.067.957-.457s-.067-.819-.457-.957c-1.329-.471-2.76-.727-4.25-.727-7.037 0-12.75 5.713-12.75 12.75s5.713 12.75 12.75 12.75 12.75-5.713 12.75-12.75c0-1.49-.256-2.921-.727-4.25-.138-.39-.567-.595-.957-.457s-.595.567-.457.957z"></path><path d="m21.47 8.53 2 2c.293.293.767.293 1.06 0l4-4c.293-.292.293-.768 0-1.06-.292-.293-.768-.293-1.06 0l-3.47 3.469s-1.47-1.469-1.47-1.469c-.292-.293-.768-.293-1.06 0-.293.292-.293.768 0 1.06z"></path></g></svg>
-                    </i><a href="login.blade.php">Login / Register</a>
+                    </i><a href="login.html">Login / Register</a>
                  </div>
                  </div>
               </div>
@@ -90,21 +145,45 @@
                     <ul class="navbar-links">
                       <li class="navbar-dropdown">
                         <a href="#">home</a>
-
+                        <div class="dropdown">
+                          <a href="index.html">home 1</a>
+                          <a href="index-2.html">home 2</a>
+                          <a href="index-3.html">home 3</a>
+                        </div>
                       </li>
                       <li class="navbar-dropdown">
                         <a href="about.html">Menus</a>
-
+                        <div class="dropdown">
+                          <a href="menu-1.html">Menu 1</a>
+                          <a href="menu-2.html">Menu 2</a>
+                          <a href="menu-3.html">Menu 3</a>
+                        </div>
                       </li>
                       <li class="navbar-dropdown">
                         <a href="#">Shop</a>
-
+                        <div class="dropdown">
+                          <a href="shop.html">our product</a>
+                          <a href="product-details.html">product details</a>
+                          <a href="shop-cart.html">shop cart</a>
+                          <a href="cart-checkout.html">cart checkout</a>
+                        </div>
                       </li>
                       <li class="navbar-dropdown">
                         <a href="#">News</a>
-
+                        <div class="dropdown">
+                          <a href="our-blog.html">our blog</a>
+                          <a href="blog-details.html">blog details</a>
+                        </div>
                       </li>
-
+                      <li class="navbar-dropdown">
+                        <a href="#">Pages</a>
+                        <div class="dropdown">
+                          <a href="about.html">about</a>
+                          <a href="our-services.html">our services</a>
+                          <a href="chef-details.html">chef details</a>
+                          <a href="login.html">login</a>
+                        </div>
+                      </li>
                       <li class="navbar-dropdown">
                         <a href="contact.html">Contact</a>
                       </li>
@@ -255,71 +334,100 @@
             <a href="JavaScript:void(0)" id="res-cross"></a>
     </div>
   </header>
+
+
+
   <section class="banner" style="background-image:url(assets/img/background.png)">
      <div class="container">
         <div class="row align-items-center">
            <div class="col-lg-7">
               <div class="title-area-data">
-                 <h2>Table Menu</h2>
-                 <p>A magical combination that sent aromas to the taste buds</p>
-              </div>
-              <ol class="breadcrumb">
-                 <li class="breadcrumb-item">
-                   <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
-                 </li>
-                 <li class="breadcrumb-item active" aria-current="page">Menus</li>
-                 <li class="breadcrumb-item active" aria-current="page">Menus 3</li>
-              </ol>
-           </div>
-           <div class="col-lg-5">
-              <div class="row">
-                 <div class="col-6">
-                    <div class="title-area-img">
-                       <img alt="title-area-img" src="assets/img/title-area-img-1.jpg">
-
-                    </div>
-                 </div>
-                 <div class="col-6">
-                    <div class="title-area-img two">
-                       <img alt="title-area-img" src="assets/img/title-area-img-2.jpg">
-                    </div>
-                 </div>
+                 <h2>About Us</h2>
+                 <p>Tak Kenal Maka Tak Sayang</p>
               </div>
            </div>
         </div>
      </div>
   </section>
 
+  @foreach ($aboutus as $item)
   <section class="gap">
      <div class="container">
-        <div class="heading-two">
-           <h2>Fast Food Menus</h2>
-           <div class="line"></div>
-        </div>
         <div class="row">
-           <div class="col-xl-4 col-lg-6">
-              <div class="fast-food-menus">
-                 <div class="fast-food-img">
-                    <img alt="fast-food-img" src="assets/img/food-img-1.png">
-                 </div>
-                 <div>
-                    <h3>ShroomBacon Burger</h3>
-                    <span>$24.00</span>
-
-                 </div>
-                 <a href="#">
-                 <i></i></a>
+           <div class="col-xl-5">
+              <div class="heading">
+                 <span>Kantin Afwah</span>
+                 <h2>Kantin PCR Dengan Variasi Menu</h2>
               </div>
-
-
            </div>
-
-
+           <div class="col-xl-7">
+            <span>Kenalan sama pemiliknya yuk!</span>
+              <div class="about-text">
+                 <div class="mt-4 d-flex align-items-center">
+                    <img alt="girl" src="{{ asset('storage/' . $item->gambar_pemilik)}}" class="about-img">
+                    <div>
+                       <p>{{$item->deskripsi_pemilik}}</p>
+                    </div>
+                 </div>
+              </div>
+           </div>
         </div>
      </div>
   </section>
-
-
+  <section class="history">
+    <div class="col">
+    </div>
+    <div class="col">
+    <h2>Sejarah Kantin</h2>
+</div> <br>
+    <div class="container">
+        <div class="row grid grid-cols-1 md:grid-cols-2">
+            <div class="col">
+                <img src="{{ asset('storage/' . $item->gambar_kantin) }}" alt="Sejarah Kantin" class="history-img">
+            </div>
+            <div class="col">
+                <p>{{$item->deskripsi_kantin}}</p>
+            </div>
+        </div>
+    </div>
+</section>
+  <div class="container">
+    <div class="row">
+       <div class="col-xl-6">
+          <div class="get-in-touch">
+             <h2>Informasi Kontak</h2>
+             <ul class="booking">
+             <li class="contact">
+                <i>
+                   <svg height="512" viewBox="0 0 32 32" width="512" xmlns="http://www.w3.org/2000/svg"><g id="_16-Smartphone" data-name="16-Smartphone"><path d="m23 2h-14a3 3 0 0 0 -3 3v22a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-22a3 3 0 0 0 -3-3zm-5.39 2-.33 1h-2.56l-.33-1zm6.39 23a1 1 0 0 1 -1 1h-14a1 1 0 0 1 -1-1v-22a1 1 0 0 1 1-1h3.28l.54 1.63a2 2 0 0 0 1.9 1.37h2.56a2 2 0 0 0 1.9-1.37l.54-1.63h3.28a1 1 0 0 1 1 1z"></path><path d="m17 24h-2a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2z"></path></g></svg>
+                </i>
+                <div>
+                   <span>Kontak :</span>
+                   <a><span>{{$item->kontak}}</span></a>
+                </div>
+             </li>
+             <li class="contact">
+                <i>
+                   <svg height="512" viewBox="0 0 32 32" width="512" xmlns="http://www.w3.org/2000/svg"><g id="_01-Email" data-name="01-Email"><path d="m29.61 12.21-13-10a1 1 0 0 0 -1.22 0l-13 10a1 1 0 0 0 -.39.79v14a3 3 0 0 0 3 3h22a3 3 0 0 0 3-3v-14a1 1 0 0 0 -.39-.79zm-13.61-7.95 11.36 8.74-11.36 8.74-11.36-8.74zm11 23.74h-22a1 1 0 0 1 -1-1v-12l11.39 8.76a1 1 0 0 0 1.22 0l11.39-8.76v12a1 1 0 0 1 -1 1z"></path></g></svg>
+                </i>
+                <div>
+                   <span>Email :</span>
+                   <a><span>{{$item->email}}</span></a>
+                </div>
+             </li>
+             </ul>
+          </div>
+          <div class="mapouter"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.620310083532!2d101.42387657496475!3d0.5708298994235937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5ab676f69bb01%3A0xfc04c99b0bbd2b1b!2sKantin%20Kampus%20PCR!5e0!3m2!1sen!2sid!4v1737032374752!5m2!1sen!2sid"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+          <div class="align-items-center d-flex mt-3">
+             <i class="fa-solid fa-location-dot me-3"></i>
+             <p>{{$item->alamat}}</p>
+          </div>
+       </div>
+    </div>
+ </div>
+ <br> <br> <br>
+@endforeach
 
 
   <!-- progress -->

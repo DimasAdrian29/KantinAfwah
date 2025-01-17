@@ -38,12 +38,14 @@ class MenuController extends Controller
             'harga' => 'required|numeric',
             'deskripsi' => 'required|string|max:255',
             'gambar' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+            'jenis_menu' => 'required|string|max:255',
         ]);
 
         $menu = new Menu();
         $menu->nama_menu = $request->nama_menu;
         $menu->deskripsi = $request->deskripsi;
         $menu->harga = $request->harga;
+        $menu->jenis_menu = $request->jenis_menu;
 
         if ($request->hasFile('gambar')) {
             $menu->gambar = $request->file('gambar')->store('images', 'public');
@@ -80,12 +82,14 @@ class MenuController extends Controller
             'harga' => 'required|numeric',
             'deskripsi' => 'required|string|max:255',
             'gambar' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+            'jenis_menu' => 'required|string|max:255',
         ]);
 
 
         $menu->nama_menu = $request->nama_menu;
         $menu->deskripsi = $request->deskripsi;
         $menu->harga = $request->harga;
+        $menu->jenis_menu = $request->jenis_menu;
 
         if ($request->hasFile('gambar')) {
             if ($menu->gambar){

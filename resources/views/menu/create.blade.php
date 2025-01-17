@@ -12,6 +12,10 @@
                 <input type="text" name="harga" class="mt-1 block w-full border-gray-300 rounded-md" required />
             </div>
             <div class="mb-4">
+                <label class="block text-sm font-medium">Jenis Menu</label>
+                <input type="text" name="jenis_menu" class="mt-1 block w-full border-gray-300 rounded-md" required />
+            </div>
+            <div class="mb-4">
                 <label class="block text-sm font-medium">Deskripsi Makanan</label>
                 <textarea name="deskripsi" id="editor" rows="5" class="mt-1 block w-full border-gray-300 rounded-md" required>
                 </textarea>
