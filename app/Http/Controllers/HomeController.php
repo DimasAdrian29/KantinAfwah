@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
 use App\Models\Slider;
+use App\Models\Promo;
+use App\Models\PesanSaran;
 use App\Models\Menu;
 use App\Models\About;
 
@@ -21,10 +23,22 @@ class HomeController extends Controller
     {
         return view('KantinAfwah.ourbrands');
     }
+    public function halamanpromo()
+    {
+        $promo=Promo::all();
+        return view('KantinAfwah.halamanpromo', compact("promo"));
+    }
+
     public function aboutus()
+
     {
         $aboutus = About::all();
         return view('KantinAfwah.aboutus', compact('aboutus'));
+    }
+    public function pesandansaran()
+    {
+        $pesansaran = PesanSaran::all();
+        return view('KantinAfwah.pesandansaran', compact('pesansaran'));
     }
     public function footer()
     {
