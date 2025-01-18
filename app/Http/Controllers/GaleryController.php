@@ -34,7 +34,6 @@ class GaleryController extends Controller
         $request->validate([
             'judul_galery' => 'required|string|max:255',
             'deskripsi' => 'required|string',
-            'nama_pengirim' => 'required|string',
             'foto' => 'required|image|mimes:jpg,jpeg,png|max:4048',
             'tanggal' => 'required|date',
         ]);
@@ -42,7 +41,6 @@ class GaleryController extends Controller
         $galery = new Galery();
         $galery->judul_galery = $request->judul_galery;
         $galery->deskripsi = $request->deskripsi;
-        $galery->deskripsi = $request->nama_pengirim;
         $galery->tanggal = $request->tanggal;
 
         if ($request->hasFile('foto')) {

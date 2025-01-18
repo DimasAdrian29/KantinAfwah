@@ -169,7 +169,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-7">
                     <div class="title-area-data">
-                        <h2>Gallery Kantin Afwah</h2>
+                        <h2>Galeri Kantin Afwah</h2>
                         <p>A magical combination that sent aromas to the taste buds</p>
                     </div>
                     <ol class="breadcrumb">
@@ -198,31 +198,42 @@
     </section>
 
     <section class="gap our-blog">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-8">
-                @foreach ($galery as $index => $item)  <!-- Looping data galeri -->
-                    <div class="recent-news-two">
-                        <div class="recent-news mt-3">
-                            <a href="{{ route('galery.show', $item->id_galery) }}">  <!-- Link ke halaman detail galeri -->
-                                <h2>{{ $item->judul_galery }}</h2>  <!-- Menampilkan judul galeri -->
+        <div class="container">
+            <div class="heading-two">
+                <h2>Galeri Kami</h2>
+                <div class="line"></div>
+            </div>
+
+            <!-- Menampilkan galeri dalam carousel seperti promo -->
+            <div class="row dishes owl-carousel owl-theme">
+                @foreach ($galery as $index => $item)
+                    <!-- Looping data galeri -->
+                    <div class="item col-xl-12">
+                        <div class="featured-dishes">
+                            <!-- Menampilkan gambar galeri -->
+                            <div class="featured-dishes-img">
+                                <img alt="recent-news-img" src="{{ Storage::url($item->foto) }}">
+                            </div>
+
+                            <!-- Menampilkan judul galeri -->
+                            <a href="{{ route('galery.show', $item->id_galery) }}">
+                                <h3>{{ $item->judul_galery }}</h3>
                             </a>
-                            </div>
-                        <img alt="recent-news-img" src="{{ Storage::url($item->foto) }}">  <!-- Menampilkan gambar galeri -->
-                        <div class="recent-news mt-3">
-                            <div>
-                                <a href="#"><span>{{ \Carbon\Carbon::parse($item->tanggal)->format('d F, Y') }}</span></a>  <!-- Menampilkan tanggal -->
-                                <a href="{{ route('galery.show', $item->id_galery) }}">  <!-- Link ke halaman detail galeri -->
-                                    <h6>{{ $item->deskripsi }}</h6>  <!-- Menampilkan judul galeri -->
-                                </a>
-                            </div>
+
+                            <!-- Menampilkan deskripsi galeri -->
+                            <p>{{ $item->deskripsi }}</p>
+
+                            <!-- Menampilkan tanggal galeri -->
+                            <a href="#">
+                                <h9>{{ \Carbon\Carbon::parse($item->tanggal)->format('d F, Y') }}</h9>
+                            </a>
                         </div>
                     </div>
                 @endforeach
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
 
 
     <footer style="background-image: url(assets/img/footer.png);background-color: #f5f8fd;">

@@ -162,6 +162,68 @@
                 </div>
             </div>
         </div>
+        <div class="mobile-nav hmburger-menu" id="mobile-nav" style="display:block;">
+            <div class="res-log">
+              <a href="index.html">
+                <img src="assets/img/logo.png" alt="Responsive Logo" class="white-logo">
+              </a>
+            </div>
+              <ul>
+      
+                <li class="menu-item-has-children"><a href="JavaScript:void(0)">Home</a>
+                  <ul class="sub-menu">
+      
+                    <li><a href="index.html">home page 1</a></li>
+                    <li><a href="index-2.html">home page 2</a></li>
+                    <li><a href="index-3.html">home page 3</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="JavaScript:void(0)">menus</a>
+                  <ul class="sub-menu">
+                    <li><a href="menu-1.html">menu 1</a></li>
+                    <li><a href="menu-2.html">menu 2</a></li>
+                    <li><a href="menu-3.html">menu 3</a></li>
+                  </ul>
+                </li>
+      
+                
+                <li class="menu-item-has-children"><a href="JavaScript:void(0)">shop</a>
+      
+                <ul class="sub-menu">
+                  <li><a href="shop.html">our product</a></li>
+                  <li><a href="product-details.html">product details</a></li>
+                  <li><a href="shop-cart.html">shop cart</a></li>
+                  <li><a href="cart-checkout.html">cart checkout</a></li>
+                </ul>
+      
+                </li>
+                <li class="menu-item-has-children"><a href="JavaScript:void(0)">News</a>
+      
+                <ul class="sub-menu">
+      
+                 <li><a href="our-blog.html">our blog</a></li>
+                          <li><a href="blog-details.html">blog details</a></li>
+                </ul>
+      
+                </li>
+                <li class="menu-item-has-children"><a href="JavaScript:void(0)">Pages</a>
+      
+                <ul class="sub-menu">
+      
+                  <li><a href="about.html">about</a></li>
+                  <li><a href="our-services.html">our services</a></li>
+                  <li><a href="chef-details.html">chef details</a></li>
+                  <li><a href="login.html">login</a></li>
+                </ul>
+      
+                </li>
+      
+                <li><a href="contact.html">contacts</a></li>
+      
+                </ul>
+      
+                <a href="JavaScript:void(0)" id="res-cross"></a>
+        </div>
     </header>
 
     <section class="slider-hero">
@@ -206,14 +268,15 @@
 
                             <!-- Menampilkan judul promo -->
                             <a href="product-details.html">
-                                <h5>{{ $item->judul }}</h5>
+                                <h3>{{ $item->judul }}</h3><br>
                             </a>
 
                             <!-- Menampilkan deskripsi promo -->
-                            <p>{{ $item->deskripsi }}</p>
+                            <p>{{ $item->deskripsi }}</p><br>
 
-                            <!-- Menampilkan harga promo jika ada -->
-                            <p><span>Harga: </span>{{ $item->harga ?? 'N/A' }}</p> <!-- Asumsi harga bisa null -->
+                            <a href="product-details.html">
+                                <h7>Berlaku hingga : {{ $item->tanggal_akhir_promo }}</h7>
+                            </a>                            
 
 
                         </div>
@@ -231,7 +294,7 @@
 
 
 
-    <section class="gap section-featured" style="background-color: #f5f8fd;">
+    <section class="gap our-blog" style="background-color: #f5f8fd;">
         <div class="container">
             <div class="heading-two">
                 <h2>Menu</h2>

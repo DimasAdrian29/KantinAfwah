@@ -10,6 +10,7 @@ use App\Models\Slider;
 use App\Models\Kutipan;
 use App\Models\Promo;
 use App\Models\Menu;
+use App\Models\Galery;
 
 class HomeController extends Controller
 {
@@ -19,7 +20,8 @@ class HomeController extends Controller
         $kutipan = Kutipan::all();
         $promo = Promo::all();
         $menu = Menu::all();
-        return view('KantinAfwah.home', compact('sliders' , 'kutipan' , 'promo' , 'menu'));
+        $galery = Galery::all();
+        return view('KantinAfwah.home', compact('sliders' , 'kutipan' , 'promo' , 'menu' , 'galery'));
     }
     public function about_us()
     {
@@ -27,7 +29,8 @@ class HomeController extends Controller
     }
     public function gallery()
     {
-        return view('KantinAfwah.gallery');
+        $galery = Galery::all();
+        return view('KantinAfwah.gallery' , compact('galery'));
     }
     public function login()
     {
