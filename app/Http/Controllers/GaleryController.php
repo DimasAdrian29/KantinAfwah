@@ -6,7 +6,7 @@ use App\Models\Galery;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Storage;
-
+use Illuminate\Validation\Rule;
 class GaleryController extends Controller
 {
     /**
@@ -34,13 +34,15 @@ class GaleryController extends Controller
         $request->validate([
             'judul_galery' => 'required|string|max:255',
             'deskripsi' => 'required|string',
-            'foto' => 'required|image|mimes:jpg,jpeg,png|max:2048',
+            'nama_pengirim' => 'required|string',
+            'foto' => 'required|image|mimes:jpg,jpeg,png|max:4048',
             'tanggal' => 'required|date',
         ]);
 
         $galery = new Galery();
         $galery->judul_galery = $request->judul_galery;
         $galery->deskripsi = $request->deskripsi;
+        $galery->deskripsi = $request->nama_pengirim;
         $galery->tanggal = $request->tanggal;
 
         if ($request->hasFile('foto')) {
@@ -65,36 +67,42 @@ class GaleryController extends Controller
      */
     public function edit(Galery $galery)
     {
-        return view('galery.edit', compact('galery      '));
+        return view('galery.edit', compact('galery'));
     }
 
     /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, Galery $galery): RedirectResponse
-    {
-        $request->validate([
-            'judul_galery' => 'required|string|max:255',
-            'deskripsi' => 'required|string',
-            'foto' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
-            'tanggal' => 'required|date',
-        ]);
+{
+    // Validasi data yang diterima
+    $request->validate([
+        'judul_galery' => 'required|string|max:255',
+        'deskripsi' => 'required|string',
+        'foto' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+        'tanggal' => 'required|date',
+    ]);
 
-        $galery->judul_galery = $request->judul_galery;
-        $galery->deskripsi = $request->deskripsi;
-        $galery->tanggal = $request->tanggal;
+    // Update data galeri
+    $galery->judul_galery = $request->judul_galery;
+    $galery->deskripsi = $request->deskripsi;
+    $galery->tanggal = $request->tanggal;
 
-        if ($request->hasFile('foto')) {
-            if ($galery->foto) {
-                Storage::delete('public/' . $galery->foto);
-            }
-            $galery->foto = $request->file('foto')->store('images/galery', 'public');
+    // Cek apakah ada foto yang diupload
+    if ($request->hasFile('foto')) {
+        // Hapus foto lama jika ada
+        if ($galery->foto) {
+            Storage::delete('public/' . $galery->foto);
         }
-
-        $galery->save();
-
-        return redirect()->route('galery.index')->with('success', 'Galery berhasil diperbarui!');
+        // Simpan foto baru
+        $galery->foto = $request->file('foto')->store('images/galery', 'public');
     }
+
+    // Simpan perubahan ke database
+    $galery->save();
+
+    return redirect()->route('galery.index')->with('success', 'Galeri berhasil diperbarui!');
+}
 
     /**
      * Remove the specified resource from storage.

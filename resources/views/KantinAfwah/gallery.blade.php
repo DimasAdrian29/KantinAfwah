@@ -142,24 +142,13 @@
                                     <a href="{{ route('KantinAfwah.home') }}">home</a>
                                 </li>
                                 <li class="navbar-dropdown">
-                                    <a href="about.html">Menu</a>
-                                    <div class="dropdown">
-                                        <a href="menu-1.html">Menu 1</a>
-                                        <a href="menu-2.html">Menu 2</a>
-                                        <a href="menu-3.html">Menu 3</a>
-                                    </div>
+                                    <a href="#">Menu</a>
                                 </li>
                                 <li class="navbar-dropdown">
                                     <a href="#">About Us</a>
-                                    <div class="dropdown">
-                                        <a href="shop.html">our product</a>
-                                        <a href="product-details.html">product details</a>
-                                        <a href="shop-cart.html">shop cart</a>
-                                        <a href="cart-checkout.html">cart checkout</a>
-                                    </div>
                                 </li>
                                 <li class="navbar-dropdown">
-                                    <a href="{{ route('KantinAfwah.gallery') }}">Gallery</a>
+                                    <a href="{{ route('KantinAfwah.gallery') }}">Galery</a>
                                 </li>
                                 <li class="navbar-dropdown">
                                     <a href="contact.html">Contact</a>
@@ -170,29 +159,23 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="hamburger-icon">
-                            <a href="contact.html" class="button">Reserve a Table</a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </header>
+
     <section class="banner" style="background-image:url(assets/img/background.png)">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-7">
                     <div class="title-area-data">
-                        <h2>Our Blog</h2>
+                        <h2>Gallery Kantin Afwah</h2>
                         <p>A magical combination that sent aromas to the taste buds</p>
                     </div>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
-                            <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                            <a href="{{ route('KantinAfwah.home') }}"><i class="fa-solid fa-house"></i> Home</a>
                         </li>
-                        <li class="breadcrumb-item active" aria-current="page">News</li>
-                        <li class="breadcrumb-item active" aria-current="page">Our Blog</li>
                     </ol>
                 </div>
                 <div class="col-lg-5">
@@ -213,90 +196,35 @@
             </div>
         </div>
     </section>
+
     <section class="gap our-blog">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-8">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-8">
+                @foreach ($galery as $index => $item)  <!-- Looping data galeri -->
                     <div class="recent-news-two">
-                        <img alt="recent-news-img" src="assets/img/recent-news-6.jpg">
+                        <div class="recent-news mt-3">
+                            <a href="{{ route('galery.show', $item->id_galery) }}">  <!-- Link ke halaman detail galeri -->
+                                <h2>{{ $item->judul_galery }}</h2>  <!-- Menampilkan judul galeri -->
+                            </a>
+                            </div>
+                        <img alt="recent-news-img" src="{{ Storage::url($item->foto) }}">  <!-- Menampilkan gambar galeri -->
                         <div class="recent-news mt-3">
                             <div>
-                                <a href="#"><span>29 December, 2023</span></a>
-                                <a href="blog-details.html">
-                                    <h2>Tender fried baby squid with a salt, pepper</h2>
+                                <a href="#"><span>{{ \Carbon\Carbon::parse($item->tanggal)->format('d F, Y') }}</span></a>  <!-- Menampilkan tanggal -->
+                                <a href="{{ route('galery.show', $item->id_galery) }}">  <!-- Link ke halaman detail galeri -->
+                                    <h6>{{ $item->deskripsi }}</h6>  <!-- Menampilkan judul galeri -->
                                 </a>
-                                <div class="d-flex align-items-center"><img alt="img" class="me-3"
-                                        src="assets/img/man.jpg">
-                                    <h6>by Thomas Walimes</h6>
-                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="recent-news-two">
-                        <img alt="recent-news-img" src="assets/img/recent-news-7.jpg">
-                        <div class="recent-news mt-3">
-                            <div>
-                                <a href="#"><span>29 December, 2023</span></a>
-                                <a href="blog-details.html">
-                                    <h2>Operates approximately 400 restaurants</h2>
-                                </a>
-                                <div class="d-flex align-items-center"><img alt="img" class="me-3"
-                                        src="assets/img/man.jpg">
-                                    <h6>by Thomas Walimes</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="recent-news-two">
-                        <img alt="recent-news-img" src="assets/img/recent-news-8.jpg">
-                        <div class="recent-news mt-3">
-                            <div>
-                                <a href="#"><span>29 December, 2023</span></a>
-                                <a href="blog-details.html">
-                                    <h2>Eclectic and imaginative menu in the restaurant</h2>
-                                </a>
-                                <div class="d-flex align-items-center"><img alt="img" class="me-3"
-                                        src="assets/img/man.jpg">
-                                    <h6>by Thomas Walimes</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="recent-news-two">
-                        <img alt="recent-news-img" src="assets/img/recent-news-9.jpg">
-                        <div class="recent-news mt-3">
-                            <div>
-                                <a href="#"><span>29 December, 2023</span></a>
-                                <a href="blog-details.html">
-                                    <h2>Menus for your event, inspired equally</h2>
-                                </a>
-                                <div class="d-flex align-items-center"><img alt="img" class="me-3"
-                                        src="assets/img/man.jpg">
-                                    <h6>by Thomas Walimes</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="recent-news-two">
-                        <img alt="recent-news-img" src="assets/img/recent-news-3.jpg">
-                        <div class="recent-news mt-3">
-                            <div>
-                                <a href="#"><span>29 December, 2023</span></a>
-                                <a href="blog-details.html">
-                                    <h2>Flowers, candles and menu cards are provided</h2>
-                                </a>
-                                <div class="d-flex align-items-center"><img alt="img" class="me-3"
-                                        src="assets/img/man.jpg">
-                                    <h6>by Thomas Walimes</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
-        </div>
-    </section>
+    </div>
+</section>
+
+
     <footer style="background-image: url(assets/img/footer.png);background-color: #f5f8fd;">
         <div class="container">
             <div class="row">

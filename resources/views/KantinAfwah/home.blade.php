@@ -142,13 +142,13 @@
                                     <a href="{{ route('KantinAfwah.home') }}">home</a>
                                 </li>
                                 <li class="navbar-dropdown">
-                                    <a href="{{ route('KantinAfwah.home') }}">Menu</a>
+                                    <a href="#">Menu</a>
                                 </li>
                                 <li class="navbar-dropdown">
                                     <a href="#">About Us</a>
                                 </li>
                                 <li class="navbar-dropdown">
-                                    <a href="{{ route('KantinAfwah.gallery') }}">Gallery</a>
+                                    <a href="{{ route('KantinAfwah.gallery') }}">Galery</a>
                                 </li>
                                 <li class="navbar-dropdown">
                                     <a href="contact.html">Contact</a>
