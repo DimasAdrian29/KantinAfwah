@@ -9,16 +9,18 @@ use App\Http\Controllers\SliderController;
 use App\Http\Controllers\QuestionAnswerController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\KutipanController;
+use App\Http\Controllers\MenuController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/kantinafwah', [HomeController::class, 'home'])->name('KantinAfwah.home');
-Route::get('/career', [HomeController::class, 'career'])->name('KantinAfwah.career');
+
+Route::resource('menu', MenuController::class);
+
+Route::get('/', [HomeController::class, 'home'])->name('KantinAfwah.home');
 Route::get('/about_us', [HomeController::class, 'about_us'])->name('KantinAfwah.about_us');
 Route::get('/gallery', [HomeController::class, 'gallery'])->name('KantinAfwah.gallery');
-Route::get('/ourbrands', [HomeController::class, 'ourbrands'])->name('KantinAfwah.ourbrands');
 Route::get('/login', [HomeController::class, 'login'])->name('KantinAfwah.login');
 Route::get('/register', [HomeController::class, 'register'])->name('KantinAfwah.register');
 

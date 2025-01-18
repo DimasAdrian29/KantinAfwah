@@ -8,6 +8,8 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
 use App\Models\Slider;
 use App\Models\Kutipan;
+use App\Models\Promo;
+use App\Models\Menu;
 
 class HomeController extends Controller
 {
@@ -15,11 +17,9 @@ class HomeController extends Controller
     {
         $sliders = Slider::all();
         $kutipan = Kutipan::all();
-        return view('KantinAfwah.home', compact('sliders' , 'kutipan'));
-    }
-    public function ourbrands()
-    {
-        return view('KantinAfwah.ourbrands');
+        $promo = Promo::all();
+        $menu = Menu::all();
+        return view('KantinAfwah.home', compact('sliders' , 'kutipan' , 'promo' , 'menu'));
     }
     public function about_us()
     {
@@ -28,10 +28,6 @@ class HomeController extends Controller
     public function gallery()
     {
         return view('KantinAfwah.gallery');
-    }
-    public function career()
-    {
-        return view('KantinAfwah.career');
     }
     public function login()
     {

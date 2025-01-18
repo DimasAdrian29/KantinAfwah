@@ -142,21 +142,10 @@
                                     <a href="{{ route('KantinAfwah.home') }}">home</a>
                                 </li>
                                 <li class="navbar-dropdown">
-                                    <a href="about.html">Menu</a>
-                                    <div class="dropdown">
-                                        <a href="menu-1.html">Menu 1</a>
-                                        <a href="menu-2.html">Menu 2</a>
-                                        <a href="menu-3.html">Menu 3</a>
-                                    </div>
+                                    <a href="{{ route('KantinAfwah.home') }}">Menu</a>
                                 </li>
                                 <li class="navbar-dropdown">
                                     <a href="#">About Us</a>
-                                    <div class="dropdown">
-                                        <a href="shop.html">our product</a>
-                                        <a href="product-details.html">product details</a>
-                                        <a href="shop-cart.html">shop cart</a>
-                                        <a href="cart-checkout.html">cart checkout</a>
-                                    </div>
                                 </li>
                                 <li class="navbar-dropdown">
                                     <a href="{{ route('KantinAfwah.gallery') }}">Gallery</a>
@@ -170,15 +159,11 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="hamburger-icon">
-                            <a href="contact.html" class="button">Reserve a Table</a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </header>
+
     <section class="slider-hero">
         <div class="slider-home-1 owl-carousel owl-theme">
             @foreach ($sliders as $index => $slider)
@@ -194,6 +179,116 @@
             @endforeach
         </div>
     </section>
+
+    <section class="gap">
+        <div class="container">
+            <div class="heading-two">
+                <h2>Promo Menarik</h2>
+                <div class="line"></div>
+            </div>
+            <div class="row dishes owl-carousel owl-theme">
+                @foreach ($promo as $item) <!-- Looping data promo -->
+                    <div class="item col-xl-12">
+                        <div class="featured-dishes">
+                            <!-- Menampilkan gambar promo -->
+                            <div class="featured-dishes-img">
+                                <img alt="featured-dishes" src="{{ Storage::url($item->gambar) }}">
+                            </div>
+
+                            <!-- Menampilkan rating bintang -->
+                            <ul class="star">
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                            </ul>
+
+                            <!-- Menampilkan judul promo -->
+                            <a href="product-details.html">
+                                <h5>{{ $item->judul }}</h5>
+                            </a>
+
+                            <!-- Menampilkan deskripsi promo -->
+                            <p>{{ $item->deskripsi }}</p>
+
+                            <!-- Menampilkan harga promo jika ada -->
+                            <p><span>Harga: </span>{{ $item->harga ?? 'N/A' }}</p> <!-- Asumsi harga bisa null -->
+
+
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+
+            <!-- Tombol menuju halaman lebih lanjut -->
+            <div class="hamburger-icon">
+                <a href="contact.html" class="button">Promo Menarik Lainnya</a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="gap section-featured" style="background-color: #f5f8fd;">
+        <div class="container">
+            <div class="heading-two">
+                <h2>Menu</h2>
+                <div class="line"></div>
+            </div>
+            <div class="row dishes owl-carousel owl-theme">
+                @foreach ($menu as $item) <!-- Looping data menu -->
+                    <div class="item col-xl-12">
+                        <div class="featured-dishes">
+                            <!-- Menampilkan gambar menu -->
+                            <div class="featured-dishes-img">
+                                <img alt="featured-dishes" src="{{ Storage::url($item->gambar) }}">
+                            </div>
+
+                            <!-- Menampilkan rating bintang -->
+                            <ul class="star">
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                            </ul>
+
+                            <!-- Menampilkan nama menu -->
+                            <a href="{{ route('menu.show', $item->id) }}">
+                                <h5>{{ $item->nama_menu }}</h5>
+                            </a>
+
+                            <!-- Menampilkan deskripsi menu -->
+                            <p>{{ $item->deskripsi }}</p>
+
+                            <!-- Menampilkan harga menu -->
+                            <p><span>Harga: </span>{{ $item->harga }}</p>
+
+                            <!-- Link menuju halaman detail menu -->
+                            <a href="{{ route('menu.show', $item->id) }}">
+                                <i><svg enable-background="new 0 0 512 512" viewBox="0 0 512 512"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <path
+                                            d="m452 120h-60.946c-7.945-67.478-65.477-120-135.054-120s-127.109 52.522-135.054 120h-60.946c-11.046 0-20 8.954-20 20v352c0 11.046 8.954 20 20 20h392c11.046 0 20-8.954 20-20v-352c0-11.046-8.954-20-20-20zm-196-80c47.484 0 87.019 34.655 94.659 80h-189.318c7.64-45.345 47.175-80 94.659-80zm176 432h-352v-312h40v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h192v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h40z">
+                                        </path>
+                                    </g>
+                                </svg></i>
+                            </a>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+
+            <!-- Tombol menuju halaman lebih lanjut -->
+            <div class="hamburger-icon">
+                <a href="{{ route('menu.index') }}" class="button">Lihat Semua Menu</a>
+            </div>
+        </div>
+    </section>
+
 
     <section class="gap">
         <div class="container">
@@ -229,135 +324,11 @@
         </div>
     </section>
 
-    <section class="gap section-featured" style="background-color: #f5f8fd;">
-        <div class="container">
-            <div class="heading-two">
-                <h2>Menu Favorit</h2>
-                <div class="line"></div>
-            </div>
-            <div class="row dishes owl-carousel owl-theme">
-                <div class="item col-xl-12">
-                    <div class="featured-dishes">
-                        <div class="featured-dishes-img">
-                            <img alt="featured-dishes" src="assets/img/featured-dishes-1.png">
-                        </div>
-                        <ul class="star">
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                        </ul>
-                        <a href="product-details.html">
-                            <h5>Brown Sandwich</h5>
-                        </a>
-                        <p><span>$</span>10.85</p>
-                        <a href="cart-checkout.html">
-                            <i><svg enable-background="new 0 0 512 512" viewBox="0 0 512 512"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g>
-                                        <path
-                                            d="m452 120h-60.946c-7.945-67.478-65.477-120-135.054-120s-127.109 52.522-135.054 120h-60.946c-11.046 0-20 8.954-20 20v352c0 11.046 8.954 20 20 20h392c11.046 0 20-8.954 20-20v-352c0-11.046-8.954-20-20-20zm-196-80c47.484 0 87.019 34.655 94.659 80h-189.318c7.64-45.345 47.175-80 94.659-80zm176 432h-352v-312h40v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h192v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h40z">
-                                        </path>
-                                    </g>
-                                </svg></i></a>
-                    </div>
-                </div>
-                <div class="item col-xl-12">
-                    <div class="featured-dishes">
-                        <div class="sale">
-                            <h6>Sale</h6>
-                        </div>
-                        <div class="featured-dishes-img">
-                            <img alt="featured-dishes" src="assets/img/featured-dishes-2.png">
-                        </div>
-                        <ul class="star">
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                        </ul>
-                        <a href="product-details.html">
-                            <h5>Banana Leaves</h5>
-                        </a>
-                        <div class="d-flex">
-                            <p><span>$</span>10.85</p>
-                            <del>$14.5</del>
-                        </div>
-                        <a href="cart-checkout.html">
-                            <i><svg enable-background="new 0 0 512 512" viewBox="0 0 512 512"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g>
-                                        <path
-                                            d="m452 120h-60.946c-7.945-67.478-65.477-120-135.054-120s-127.109 52.522-135.054 120h-60.946c-11.046 0-20 8.954-20 20v352c0 11.046 8.954 20 20 20h392c11.046 0 20-8.954 20-20v-352c0-11.046-8.954-20-20-20zm-196-80c47.484 0 87.019 34.655 94.659 80h-189.318c7.64-45.345 47.175-80 94.659-80zm176 432h-352v-312h40v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h192v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h40z">
-                                        </path>
-                                    </g>
-                                </svg></i></a>
-                    </div>
-                </div>
-                <div class="item col-xl-12">
-                    <div class="featured-dishes">
-                        <div class="featured-dishes-img">
-                            <img alt="featured-dishes" src="assets/img/featured-dishes-3.png">
-                        </div>
-                        <ul class="star">
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                        </ul>
-                        <a href="product-details.html">
-                            <h5>Parisian Hamburger</h5>
-                        </a>
-                        <p><span>$</span>10.85</p>
-                        <a href="cart-checkout.html">
-                            <i><svg enable-background="new 0 0 512 512" viewBox="0 0 512 512"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g>
-                                        <path
-                                            d="m452 120h-60.946c-7.945-67.478-65.477-120-135.054-120s-127.109 52.522-135.054 120h-60.946c-11.046 0-20 8.954-20 20v352c0 11.046 8.954 20 20 20h392c11.046 0 20-8.954 20-20v-352c0-11.046-8.954-20-20-20zm-196-80c47.484 0 87.019 34.655 94.659 80h-189.318c7.64-45.345 47.175-80 94.659-80zm176 432h-352v-312h40v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h192v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h40z">
-                                        </path>
-                                    </g>
-                                </svg></i></a>
-                    </div>
-                </div>
-                <div class="item col-xl-12">
-                    <div class="featured-dishes">
-                        <div class="featured-dishes-img">
-                            <img alt="featured-dishes" src="assets/img/featured-dishes-2.png">
-                        </div>
-                        <ul class="star">
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                        </ul>
-                        <a href="product-details.html">
-                            <h5>Parisian Hamburger</h5>
-                        </a>
-                        <p><span>$</span>10.85</p>
-                        <a href="cart-checkout.html">
-                            <i><svg enable-background="new 0 0 512 512" viewBox="0 0 512 512"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g>
-                                        <path
-                                            d="m452 120h-60.946c-7.945-67.478-65.477-120-135.054-120s-127.109 52.522-135.054 120h-60.946c-11.046 0-20 8.954-20 20v352c0 11.046 8.954 20 20 20h392c11.046 0 20-8.954 20-20v-352c0-11.046-8.954-20-20-20zm-196-80c47.484 0 87.019 34.655 94.659 80h-189.318c7.64-45.345 47.175-80 94.659-80zm176 432h-352v-312h40v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h192v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h40z">
-                                        </path>
-                                    </g>
-                                </svg></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <div class="gap no-top">
         <div style="background-image: url(assets/img/follow.jpg)" class="follow">
             <i class="fa-brands fa-instagram"></i>
             <a href="#">
-                <h2>Follow @Winsfolio.com</h2>
+                <h2>Follow @KantinAfwah</h2>
             </a>
             <p>Join our community to inspire your desires</p>
         </div>
@@ -368,8 +339,8 @@
                 <div class="col-xl-4 col-lg-6">
                     <div class="logo-white">
                         <a href="index.html"><img alt="logo-white" src="assets/img/logo-white.png"></a>
-                        <p>Tuesday - Saturday: 12:00pm - 23:00pm
-                            <span>Closed on Sunday</span>
+                        <p>Monday - Friday : 07:00am - 05:00pm
+                            <span>Closed on Saturday and Sunday</span>
                         </p>
                         <img alt="tripa" src="assets/img/tripa.png">
                         <h6>5 star rated on TripAdvisor</h6>
@@ -411,7 +382,7 @@
                 </div>
             </div>
             <div class="footer-bootem">
-                <h6><span>© 2023 Foodio</span> | Restaurant and BBQ.</h6>
+                <h6><span>© 2023 Foodio</span> | Kantin Afwah</h6>
                 <div class="header-social-media">
                     <a href="#">Facebook</a>
                     <a href="#">Twitter</a>
