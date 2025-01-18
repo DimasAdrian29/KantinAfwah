@@ -7,10 +7,16 @@ use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
 use App\Models\Slider;
+
 use App\Models\Kutipan;
 use App\Models\Promo;
 use App\Models\Menu;
 use App\Models\Galery;
+
+use App\Models\PesanSaran;
+
+use App\Models\About;
+
 
 class HomeController extends Controller
 {
@@ -23,14 +29,38 @@ class HomeController extends Controller
         $galery = Galery::all();
         return view('KantinAfwah.home', compact('sliders' , 'kutipan' , 'promo' , 'menu' , 'galery'));
     }
-    public function about_us()
+    public function halamanpromo()
     {
-        return view('KantinAfwah.about');
+        $promo=Promo::all();
+        return view('KantinAfwah.halamanpromo', compact("promo"));
+    }
+
+    public function aboutus()
+
+    {
+        $aboutus = About::all();
+        return view('KantinAfwah.aboutus', compact('aboutus'));
+    }
+    public function pesandansaran()
+    {
+        $pesansaran = PesanSaran::all();
+        return view('KantinAfwah.pesandansaran', compact('pesansaran'));
     }
     public function gallery()
     {
         $galery = Galery::all();
         return view('KantinAfwah.gallery' , compact('galery'));
+        return view('KantinAfwah.footer');
+    }
+    public function daftarmenu()
+    {
+
+        $daftarmenu = Menu::all();
+        return view('KantinAfwah.daftarmenu', compact('daftarmenu'));
+    }
+    public function career()
+    {
+        return view('KantinAfwah.career');
     }
     public function login()
     {

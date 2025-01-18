@@ -1,0 +1,124 @@
+F
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e1e1e1;
+            /* abu abu muda */
+            color: #333;
+            /* Warna teks */
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: #479b6b;
+            /* tosca */
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        /* About Section */
+        .about-us {
+            padding: 2rem;
+            text-align: center;
+            background-color: #e1e1e1;
+            /* abu abu muda */
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-us h2 {
+            color: #48cb90;
+            /* Merah */
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            border-bottom: 3px solid #479b6b;
+            /* toska gelap */
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .about-us ul {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+            text-align: left;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .about-us ul li {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .about-us ul li strong {
+            color: #357458;
+        }
+
+        /* Map Section */
+        .map-container {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        iframe {
+            border: 2px solid #bababa;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 600px;
+            height: 450px;
+        }
+
+        /* Footer */
+        footer {
+            background: #479b6b;
+            /*  */
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            margin-top: 2rem;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .text-with-image {
+            display: flex;
+            align-items: center;
+            text-align: left; /* Mengatur teks rata kiri */
+            line-height: 1.6; /* Memberikan jarak antar baris teks */
+            margin: 0;
+        }
+
+        .text-with-image img {
+            width: 450px;
+            height: auto;
+            margin-right: 15px;
+            margin-left: 15px;
+        }
+
+        .text-with-image p {
+            margin: 5;
+        }
+        .teks-kiri {
+            text-align: left; /* Menjadikan teks rata kiri */
+            line-height: 1.5;  /* Mengatur jarak antar baris agar lebih rapi */
+        }
+        .teks-kanan {
+            text-align: right; /* Menjadikan teks rata kiri */
+            line-height: 1.5;  /* Mengatur jarak antar baris agar lebih rapi */
+        }
+        
