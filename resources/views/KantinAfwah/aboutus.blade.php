@@ -391,6 +391,7 @@
         </div>
     </div>
 </section>
+<section>
   <div class="container">
     <div class="row">
        <div class="col-xl-6">
@@ -427,8 +428,16 @@
     </div>
  </div>
  <br> <br> <br>
+</section>
 @endforeach
 
+<footer style="background-image: url(assets/img/footer.png); background-color: #f5f8fd; margin-top: 1px; padding: 1px 0;">
+    <div class="container">
+       <div class="footer-bootem">
+          <h6><span>© 2025 Kantin Afwah</span> | Kantin PCR.</h6>
+       </div>
+    </div>
+</footer>
 
   <!-- progress -->
   <div id="progress" style="display: none; background: conic-gradient(rgb(243, 39, 76) 0%, rgb(215, 215, 215) 0%);">

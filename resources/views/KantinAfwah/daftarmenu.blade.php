@@ -288,18 +288,17 @@
      </div>
   </section>
 
-
-  <section class="gap">
+  <section class="gap" style="margin-top: 2px; margin-bottom: 1px;">
     <!-- Menu Makanan -->
-    <div class="container">
-        <div class="heading-two">
+    <div class="container" style="padding-top: 1px; padding-bottom: 1px;">
+        <div class="heading-two" style="margin-bottom: 5px;">
             <h2>Makanan</h2>
             <div class="line"></div>
         </div>
         <div class="row">
             @foreach ($daftarmenu as $item)
-            @if (strtolower($item->jenis_menu) === 'makanan') <!-- Pastikan kolom jenis_menu ada di database -->
-                    <div class="col-xl-4 col-lg-6">
+            @if (strtolower($item->jenis_menu) === 'makanan')
+                    <div class="col-xl-4 col-lg-6" style="margin-bottom: 2px;">
                         <div class="fast-food-menus">
                             <div class="fast-food-img">
                                 <img src="{{ Storage::url($item->gambar) }}" class="w-full h-48 object-cover" alt="Gambar Menu" />
@@ -316,18 +315,18 @@
         </div>
     </div>
 
-    <br><br><br><br><br>
-
+    <br><br><br><br>
+    
     <!-- Menu Minuman -->
-    <div class="container">
-        <div class="heading-two">
+    <div class="container" style="padding-top: 1px; padding-bottom: 1px;">
+        <div class="heading-two" style="margin-bottom: 5px;">
             <h2>Minuman</h2>
             <div class="line"></div>
         </div>
         <div class="row">
             @foreach ($daftarmenu as $item)
-            @if (strtolower($item->jenis_menu) === 'minuman')  <!-- Pastikan kolom jenis_menu ada di database -->
-                    <div class="col-xl-4 col-lg-6">
+            @if (strtolower($item->jenis_menu) === 'minuman')
+                    <div class="col-xl-4 col-lg-6" style="margin-bottom: 2px;">
                         <div class="fast-food-menus">
                             <div class="fast-food-img">
                                 <img src="{{ Storage::url($item->gambar) }}" class="w-full h-48 object-cover" alt="Gambar Menu" />
@@ -344,7 +343,13 @@
         </div>
     </div>
 </section>
-
+<footer style="background-image: url(assets/img/footer.png); background-color: #f5f8fd; margin-top: 1px; padding: 1px 0;">
+    <div class="container">
+       <div class="footer-bootem">
+          <h6><span>© 2025 Kantin Afwah</span> | Kantin PCR.</h6>
+       </div>
+    </div>
+</footer>
 
 
 
