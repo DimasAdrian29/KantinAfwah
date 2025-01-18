@@ -21,6 +21,11 @@ class HomeController extends Controller
     {
         return view('KantinAfwah.ourbrands');
     }
+    public function halamanpromo()
+    {
+        $promo=Promo::all();
+        return view('KantinAfwah.halamanpromo', compact("promo"));
+    }
     public function about_us()
     {
         return view('KantinAfwah.about');

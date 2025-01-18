@@ -54,6 +54,7 @@ Route::get('/ourbrands', [HomeController::class, 'ourbrands'])->name('KantinAfwa
 Route::get('/login', [HomeController::class, 'login'])->name('KantinAfwah.login');
 Route::get('/register', [HomeController::class, 'register'])->name('KantinAfwah.register');
 Route::get('/pesandansaran', [HomeController::class, 'pesandansaran'])->name('KantinAfwah.pesandansaran');
+Route::get('/halamanpromo', [HomeController::class, 'halamanpromo'])->name('KantinAfwah.halamanpromo');
 
 
 Route::get('/dashboard', function () {

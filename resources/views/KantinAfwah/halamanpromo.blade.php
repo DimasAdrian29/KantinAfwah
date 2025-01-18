@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="zxx">
 
-<!-- Mirrored from winsfolio.net/html/foodio/product-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Nov 2024 11:36:36 GMT -->
+<!-- Mirrored from winsfolio.net/html/foodio/shop.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Nov 2024 11:36:36 GMT -->
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Foodio - Product Details</title>
+  <title>Foodio - Shop</title>
   <link rel="icon" href="assets/img/logo-icon.png">
   <!-- CSS only -->
    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
@@ -86,8 +86,16 @@
                         <img alt="logo" src="assets/img/logo.png">
                      </a>
                   </div>
-                  <div class="bar-menu">
-                     <i class="fa-solid fa-bars"></i>
+                  <div class="d-flex cart-checkout">
+                    <a href="cart-checkout.html">
+                        <i>
+                            <svg enable-background="new 0 0 512 512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g>
+                            <path d="m452 120h-60.946c-7.945-67.478-65.477-120-135.054-120s-127.109 52.522-135.054 120h-60.946c-11.046 0-20 8.954-20 20v352c0 11.046 8.954 20 20 20h392c11.046 0 20-8.954 20-20v-352c0-11.046-8.954-20-20-20zm-196-80c47.484 0 87.019 34.655 94.659 80h-189.318c7.64-45.345 47.175-80 94.659-80zm176 432h-352v-312h40v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h192v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h40z"></path></g></svg>
+                        </i>
+                    </a>
+                    <div class="bar-menu">
+                         <i class="fa-solid fa-bars"></i>
+                    </div>
                   </div>
                </div>
             </div>
@@ -150,70 +158,6 @@
                   <svg id="Shoping-bags" enable-background="new 0 0 512 512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g><path d="m452 120h-60.946c-7.945-67.478-65.477-120-135.054-120s-127.109 52.522-135.054 120h-60.946c-11.046 0-20 8.954-20 20v352c0 11.046 8.954 20 20 20h392c11.046 0 20-8.954 20-20v-352c0-11.046-8.954-20-20-20zm-196-80c47.484 0 87.019 34.655 94.659 80h-189.318c7.64-45.345 47.175-80 94.659-80zm176 432h-352v-312h40v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h192v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h40z"></path></g></svg>
 
                 </a>
-
-                <div class="cart-popup">
-                    <button type='button' class='close' onclick='$(this).parent().removeClass("show-cart");'>×</button>
-                    <ul>
-
-                      <li class="d-flex align-items-center position-relative">
-
-                        <div class="p-img light-bg">
-
-                          <img src="assets/img/product-img-1.png" alt="Product Image">
-
-                        </div>
-
-                        <div class="p-data">
-
-                          <h3 class="font-semi-bold">Brown Sandwich</h3>
-
-                          <p class="theme-clr font-semi-bold">1 x $10.50</p>
-
-                        </div>
-
-                        <a href="JavaScript:void(0)" id="crosss"></a>
-
-                      </li>
-
-                      <li class="d-flex align-items-center position-relative">
-
-                        <div class="p-img light-bg">
-
-                          <img src="assets/img/product-img-1.png" alt="Product Image">
-
-                        </div>
-
-                        <div class="p-data">
-
-                          <h3 class="font-semi-bold">Banana Leaves</h3>
-
-                          <p class="theme-clr font-semi-bold">1 x $12.60</p>
-
-                        </div>
-
-                        <a href="JavaScript:void(0)" id="cross"></a>
-
-                      </li>
-
-                    </ul>
-
-                      <div class="cart-total d-flex align-items-center justify-content-between">
-
-                        <span class="font-semi-bold">Total:</span>
-
-                        <span class="font-semi-bold">$23.10</span>
-
-                      </div>
-
-                      <div class="cart-btns d-flex align-items-center justify-content-between">
-
-                        <a class="font-bold" href="shop-cart.html">View Cart</a>
-
-                        <a class="font-bold theme-bg-clr text-white checkout" href="cart-checkout.html">Checkout</a>
-
-                      </div>
-
-                </div>
 
               </div>
                      <a href="contact.html" class="button">Reserve a Table</a>
@@ -285,126 +229,98 @@
           <a href="JavaScript:void(0)" id="res-cross"></a>
   </div>
 </header>
-
 <section class="banner" style="background-image:url(assets/img/background.png)">
    <div class="container">
       <div class="row align-items-center">
          <div class="col-lg-7">
             <div class="title-area-data">
-               <h2>Halaman Pesan dan Saran</h2>
-               <p>Berikan Pesan dan Saran anda kepada kami agar kami dapat meningkatkan kenyamanan anda </p>
+               <h2>Halaman Promo</h2>
+               <p>Temukan Promo menarik di kantin afwah</p>
             </div>
             <ol class="breadcrumb">
                <li class="breadcrumb-item">
                  <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
                </li>
-               <li class="breadcrumb-item active" aria-current="page">Halaman Pesan Saran</li>
-
+               <li class="breadcrumb-item active" aria-current="page">Halaman Promo</li>
             </ol>
          </div>
       </div>
    </div>
 </section>
-<section class="gap featured-dishes-product-detail-img">
 
-    <div class="container">
-        <div class="review">
-            @if (session('success'))
-                <div class="bg-green-500 text-white p-3 mb-4">
-                    {{ session('success') }}
-                </div>
-                @endif
-
-                @if (session('error'))
-                <div class="bg-red-500 text-white p-3 mb-4">
-                    {{ session('error') }}
-                </div>
-                @endif
-                @if ($errors->any())
-                <div class="bg-red-500 text-white p-3 mb-4">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-                @endif
-                <form class="add-review leave-comment" action="{{ route('pesanSaran.store') }}" method="POST">
-                    @csrf
-                    <div class="rating">
-                        <h3>Tambahkan Pesan dan Saran</h3>
-                        <div class="d-flex align-items-center">
-                            <div class="start d-flex align-items-center ps-md-4">
-                                <!-- Placeholder for rating logic if needed -->
-                            </div>
-                        </div>
+<section class="gap" style="padding: 20px;">
+    <div class="container" style="height: auto; padding: 0;">
+        <div class="row">
+            @foreach ($promo as $item)
+            <div class="col-xl-4 col-md-6 mb-4">
+                <div class="featured-dishes" style="height: auto;">
+                    <div class="image-container" style="display: flex; justify-content: center; align-items: center; width: 250px; height: 125px; overflow: hidden; margin: 0 auto;">
+                        <img alt="img"
+                             src="{{ Storage::url($item->gambar) }}"
+                             style="width: auto; height: 100%; object-fit: cover;">
                     </div>
-                    <div class="row">
-                        <div class="col-lg-6 ps-lg-0">
-                            <input
-                                type="text"
-                                name="nama"
-                                value="{{ old('nama') }}"
-                                placeholder="Complete Name"
-                                class="mt-1 block w-full border-gray-300 rounded-md"
-                            >
-                        </div>
-                        <div class="col-lg-6 pe-lg-0">
-                            <input
-                                type="email"
-                                name="email"
-                                value="{{ old('email') }}"
-                                placeholder="Email Address"
-                                class="mt-1 block w-full border-gray-300 rounded-md"
-                            >
-                        </div>
-                    </div>
-                    <textarea
-                        name="pesan"
-                        rows="5"
-                        placeholder="Add Review"
-                        class="mt-1 block w-full border-gray-300 rounded-md"
-                    >{{ old('pesan') }}</textarea>
-                    <button type="submit" class="button bg-blue-500 text-white px-4 py-2 rounded">
-                        <span>Post Review</span>
-                    </button>
-                </form>
-                <br><br>
-                <h3>Pesan dan Saran</h3>
-                @foreach ($pesansaran as $item)
-                <div class="single-comment">
-                    <img alt="img" src="assets/img/gambarprofil.jpg" style="width: 125px; height: 125px;">
-                    <div class="ps-md-4">
-                      <div class="d-flex align-items-center">
-                        <h4>{{ $item->nama }}</h4>
-                        <span>{{ $item->created_at }}</span>
-                        </div>
-                        <p>{{ $item->pesan }}</p>
-                        <p></p><p>
-                            @if ($item->jawaban === 'kosong')
-                                <!-- Jika jawaban adalah "kosong", tampilkan string kosong -->
-
-                            @else
-                                <!-- Jika jawaban tidak "kosong", tampilkan nilai jawaban -->
-                                balasan:{{ $item->jawaban }}
-                            @endif
-                        </p>
-
-                    </div>
+                    <h3>Promo: {{ $item->judul }}</h3>
+                    <h15>Tanggal awal promo: {{ $item->tanggal_awal_promo }}</h15>
+                    <br><h15>Tanggal akhir promo: {{ $item->tanggal_akhir_promo }}</h15><br>
+                    <br>
+                    <h3>Deskripsi promo: </h3>
+                    <h20>{{ $item->deskripsi }}</h20>
                 </div>
+            </div>
             @endforeach
-
-                <br>
-
-
-              </div>
-     </div>
-
-  </section>
-
+        </div>
+    </div>
 </section>
-<footer style="background-image: url(assets/img/footer.png);background-color: #f5f8fd;">
 
+
+
+
+<footer style="background-image: url(assets/img/footer.png);background-color: #f5f8fd;">
+   <div class="container">
+      <div class="row">
+         <div class="col-xl-4 col-lg-6">
+            <div class="logo-white">
+               <a href="index.html"><img alt="logo-white" src="assets/img/logo-white.png"></a>
+               <p>Tuesday - Saturday:   12:00pm - 23:00pm
+               <span>Closed on Sunday</span></p>
+               <img alt="tripa" src="assets/img/tripa.png">
+               <h6>5 star rated on TripAdvisor</h6>
+            </div>
+         </div>
+         <div class="col-xl-2 col-lg-3 col-md-6">
+            <div class="link-about">
+               <h3>About</h3>
+               <ul>
+                  <li><i class="fa-solid fa-angle-right"></i><a href="about.html">Information</a></li>
+                  <li><i class="fa-solid fa-angle-right"></i><a href="#">Special Dish</a></li>
+                  <li><i class="fa-solid fa-angle-right"></i><a href="#">Reservation</a></li>
+                  <li><i class="fa-solid fa-angle-right"></i><a href="contact.html">Contact</a></li>
+               </ul>
+            </div>
+         </div>
+         <div class="col-xl-2 col-lg-3 col-md-6">
+            <div class="link-about">
+               <h3>menu</h3>
+               <ul>
+                  <li><i class="fa-solid fa-angle-right"></i><a href="menu-1.html">Steaks</a></li>
+                  <li><i class="fa-solid fa-angle-right"></i><a href="menu-1.html">Burgers</a></li>
+                  <li><i class="fa-solid fa-angle-right"></i><a href="menu-1.html">Coctails</a></li>
+                  <li><i class="fa-solid fa-angle-right"></i><a href="menu-1.html">Bar B Q</a></li>
+                  <li><i class="fa-solid fa-angle-right"></i><a href="menu-1.html">Desserts</a></li>
+               </ul>
+            </div>
+         </div>
+         <div class="col-xl-4 col-lg-6">
+            <div class="link-about">
+               <h3>Newsletter</h3>
+               <p>Get recent news and updates.</p>
+               <form class="footer-form">
+                  <input type="text" name="Enter Your Email Address" placeholder="Enter Your Email Address...">
+                  <button class="button">Subscribe</button>
+               </form>
+            </div>
+         </div>
+      </div>
       <div class="footer-bootem">
          <h6><span>© 2023 Foodio</span> | Restaurant and BBQ.</h6>
          <div class="header-social-media">
@@ -420,7 +336,6 @@
 <div id="progress">
       <span id="progress-value"><i class="fa-solid fa-arrow-up"></i></span>
 </div>
-
 <!-- Bootstrap Js -->
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/owl.carousel.min.js"></script>
