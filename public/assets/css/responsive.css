@@ -132,8 +132,11 @@
   .featured-arae-three h1 {
     font-size: 74px;
   }
+  .navbar .logo img {
+    width: 120px; /* Ukuran logo di layar kecil */
+}
   .logo img {
-    width: 80%;
+    width: 50%;
   }
   ul.star li i {
     font-size: 12px;
@@ -308,7 +311,7 @@
     font-size: 20px;
   }
   #countdown ul li span {
-     margin-top: 0px; 
+     margin-top: 0px;
   }
   .download-from h5 {
     font-size: 16px;
@@ -435,13 +438,14 @@
   }
   .chef > img {
     width: 100%;
-  } 
+  }
   .app-foods:before {
     width: 660px;
   }
   .featured-dishes-img img {
     margin: auto;
     width: 100%;
+    border-radius: 15px;
   }
   .recent-news h3 {
     width: 100%;
@@ -1128,7 +1132,7 @@
     	width: 50%;
 		}
 		.featured-arae-two-img.three {
-     margin-top: 0px; 
+     margin-top: 0px;
 		}
 		.category-choose-img:before{
 			display: none;
@@ -1176,7 +1180,7 @@
 		.section-featured {
     padding-top: 280px;
     margin-top: -212px;
-	}	
+	}
 		#progress {
     height: 50px;
     width: 50px;
@@ -1415,7 +1419,7 @@
 	}
 	.history-text img{
 		margin-right: 0;
-	}	
+	}
 	.history-text {
     flex-wrap: wrap;
     text-align: center;
@@ -1470,7 +1474,7 @@
 		.section-featured {
     padding-top: 280px;
     margin-top: -230px;
-		}		
+		}
 	.heading-two .line {
     width: 170px;
     height: 6px;
@@ -1642,7 +1646,7 @@
     font-size: 14px;
 	}
 	.blog-img-video i svg {
-    width: 10px;	
+    width: 10px;
 	}
 	.get-in-touch .booking{
 		flex-wrap: wrap;
@@ -1732,7 +1736,7 @@
   }
   form.add-review.leave-comment .rating {
     display: block;
-     padding-bottom: 0px; 
+     padding-bottom: 0px;
   }
   .private-table {
     width: 330px;
@@ -1956,4 +1960,9 @@
     padding-top: 10px;
     padding-bottom: 30px;
 	}
+}
+.underlined {
+    border-bottom: 2px solid #000; /* Adds a solid black line underneath */
+    display: inline-block; /* Ensures the border only applies to the text */
+    padding-bottom: 5px; /* Optional: Add space between text and underline */
 }

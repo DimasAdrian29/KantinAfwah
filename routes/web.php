@@ -14,6 +14,7 @@ use App\Http\Controllers\LandingController;
 use App\Http\Controllers\PesanSaranController;
 
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -46,6 +47,14 @@ Route::resource('about', AboutController::class);
 Route::resource('kutipan', KutipanController::class);
 
 
+
+Route::resource('about', AboutController::class);
+Route::resource('galery', GaleryController::class);
+
+
+Route::get('/', [HomeController::class, 'home'])->name('KantinAfwah.home');
+Route::get('/about_us', [HomeController::class, 'about_us'])->name('KantinAfwah.about_us');
+Route::get('/gallery', [HomeController::class, 'gallery'])->name('KantinAfwah.gallery');
 Route::get('/kantinafwah', [HomeController::class, 'home'])->name('KantinAfwah.home');
 Route::get('/career', [HomeController::class, 'career'])->name('KantinAfwah.career');
 Route::get('/aboutus', [HomeController::class, 'aboutus'])->name('KantinAfwah.aboutus');
@@ -71,10 +80,13 @@ Route::middleware('auth')->group(function () {
 Route::resource('sliders', SliderController::class)->only(['index', 'store','destroy','create','edit','update']);
 Route::resource('question_answer', QuestionAnswerController::class)->only(['index', 'store','edit','update','destroy']);
 Route::get('/landing', [LandingController::class, 'index'])->name('home');
-Route::resource('galery', GaleryController::class)->only(['create','index', 'store', 'edit', 'update', 'destroy']);
 Route::resource('promo', PromoController::class)->only(['create','index', 'store', 'edit', 'update', 'destroy']);
 
+
+Route::resource('kutipan', KutipanController::class)->only(['index', 'store','destroy','create','edit','update']);
+Route::resource('menu', MenuController::class)->only(['index', 'store','destroy','create','edit','update','show']);
 Route::resource('pesanSaran', PesanSaranController::class)->only(['create','index', 'store', 'edit', 'update', 'destroy']);
+
 require __DIR__.'/auth.php';
 
 

@@ -81,7 +81,9 @@ class MenuController extends Controller
             'nama_menu' => 'required|string|max:255',
             'harga' => 'required|numeric',
             'deskripsi' => 'required|string|max:255',
+
             'gambar' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+
             'jenis_menu' => 'required|string|max:255',
         ]);
 

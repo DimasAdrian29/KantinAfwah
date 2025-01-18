@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="zxx">
 
-<!-- Mirrored from winsfolio.net/html/foodio/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Nov 2024 11:35:43 GMT -->
+<!-- Mirrored from winsfolio.net/html/foodio/our-blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Nov 2024 11:36:39 GMT -->
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foodio - Home 1</title>
+    <title>Foodio - Our blog</title>
     <link rel="icon" href="https://s3-alpha-sig.figma.com/img/0748/0615/6665106318dd0fedf02562c8d127af57?Expires=1737936000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=n0aGPYWEyg5VTZBNl8~WgFsalgK5kFvyNAJ9~ZoGu0vMO2lIqqeZLdC-Ub-Dyd6yHyo3n2uHgtEfjn6wQ6ZCCK9S5pEuOLg6mQhcYXOQp-opne6y8EHmCdXLXXXuNQrr6ApPJe54B0MZJ0lBT2RyTmKFVMHT5U6-egR8DDk3RLRwWxUO86YvuFaT2ob06uclDhMG7pCH~44qRhOOAeoT~VrHri2wL9m4yUTaE~5iqR~TcAUyKSWADlNL33DwKaKgB-aexXpO-d7GjMIppg1V-aZ5p7cEriewbWKqwOI8qNVXTRaBVmmBAiTvKJWwoc7paqUcS5rX15H-8vDa23vhTg__">
     <!-- CSS only -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
@@ -146,7 +146,6 @@
                                 </li>
                                 <li class="navbar-dropdown">
                                     <a href="#">About Us</a>
-
                                 </li>
                                 <li class="navbar-dropdown">
                                     <a href="{{ route('KantinAfwah.gallery') }}">Galery</a>
@@ -170,10 +169,10 @@
               </a>
             </div>
               <ul>
-
+      
                 <li class="menu-item-has-children"><a href="JavaScript:void(0)">Home</a>
                   <ul class="sub-menu">
-
+      
                     <li><a href="index.html">home page 1</a></li>
                     <li><a href="index-2.html">home page 2</a></li>
                     <li><a href="index-3.html">home page 3</a></li>
@@ -186,225 +185,127 @@
                     <li><a href="menu-3.html">menu 3</a></li>
                   </ul>
                 </li>
-
-
+      
+                
                 <li class="menu-item-has-children"><a href="JavaScript:void(0)">shop</a>
-
+      
                 <ul class="sub-menu">
                   <li><a href="shop.html">our product</a></li>
                   <li><a href="product-details.html">product details</a></li>
                   <li><a href="shop-cart.html">shop cart</a></li>
                   <li><a href="cart-checkout.html">cart checkout</a></li>
                 </ul>
-
+      
                 </li>
                 <li class="menu-item-has-children"><a href="JavaScript:void(0)">News</a>
-
+      
                 <ul class="sub-menu">
-
+      
                  <li><a href="our-blog.html">our blog</a></li>
                           <li><a href="blog-details.html">blog details</a></li>
                 </ul>
-
+      
                 </li>
                 <li class="menu-item-has-children"><a href="JavaScript:void(0)">Pages</a>
-
+      
                 <ul class="sub-menu">
-
+      
                   <li><a href="about.html">about</a></li>
                   <li><a href="our-services.html">our services</a></li>
                   <li><a href="chef-details.html">chef details</a></li>
                   <li><a href="login.html">login</a></li>
                 </ul>
-
+      
                 </li>
-
+      
                 <li><a href="contact.html">contacts</a></li>
-
+      
                 </ul>
-
+      
                 <a href="JavaScript:void(0)" id="res-cross"></a>
         </div>
     </header>
 
-    <section class="slider-hero">
-        <div class="slider-home-1 owl-carousel owl-theme">
-            @foreach ($sliders as $index => $slider)
-                <div class="hero-section item"
-                    style="background-image: url('{{ Storage::url($slider->gambar_slider) }}')">
-                    <div class="container">
-                        <div class="row align-items-end">
-                            <div class="col-xl-6">
+    <section class="banner" style="background-image:url(assets/img/background.png)">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="title-area-data">
+                        <h2>Galeri Kantin Afwah</h2>
+                        <p>A magical combination that sent aromas to the taste buds</p>
+                    </div>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="{{ route('KantinAfwah.home') }}"><i class="fa-solid fa-house"></i> Home</a>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-lg-5">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="title-area-img">
+                                <img alt="title-area-img" src="assets/img/title-area-img-1.jpg">
+                                <img alt="pata" class="pata" src="assets/img/pata.png">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="title-area-img two">
+                                <img alt="title-area-img" src="assets/img/title-area-img-2.jpg">
                             </div>
                         </div>
                     </div>
                 </div>
-            @endforeach
-        </div>
-    </section>
-
-    <section class="gap">
-        <div class="container">
-            <div class="heading-two">
-                <h2>Promo Menarik</h2>
-                <div class="line"></div>
-            </div>
-            <div class="row dishes owl-carousel owl-theme">
-                @foreach ($promo as $item) <!-- Looping data promo -->
-                    <div class="item col-xl-12">
-                        <div class="featured-dishes">
-                            <!-- Menampilkan gambar promo -->
-                            <div class="featured-dishes-img">
-                                <img alt="featured-dishes" src="{{ Storage::url($item->gambar) }}">
-                            </div>
-
-                            <!-- Menampilkan rating bintang -->
-                            <ul class="star">
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                            </ul>
-
-                            <!-- Menampilkan judul promo -->
-                            <a href="product-details.html">
-                                <h3>{{ $item->judul }}</h3><br>
-                            </a>
-
-                            <!-- Menampilkan deskripsi promo -->
-                            <p>{{ $item->deskripsi }}</p><br>
-
-                            <a href="product-details.html">
-                                <h7>Berlaku hingga : {{ $item->tanggal_akhir_promo }}</h7>
-                            </a>
-
-
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-
-            <!-- Tombol menuju halaman lebih lanjut -->
-            <div class="hamburger-icon">
-                <a href="contact.html" class="button">Promo Menarik Lainnya</a>
             </div>
         </div>
     </section>
 
-
-
-
-    <section class="gap our-blog" style="background-color: #f5f8fd;">
+    <section class="gap our-blog">
         <div class="container">
             <div class="heading-two">
-                <h2>Menu</h2>
+                <h2>Galeri Kami</h2>
                 <div class="line"></div>
             </div>
+
+            <!-- Menampilkan galeri dalam carousel seperti promo -->
             <div class="row dishes owl-carousel owl-theme">
-                @foreach ($menu as $item) <!-- Looping data menu -->
+                @foreach ($galery as $index => $item)
+                    <!-- Looping data galeri -->
                     <div class="item col-xl-12">
                         <div class="featured-dishes">
-                            <!-- Menampilkan gambar menu -->
+                            <!-- Menampilkan gambar galeri -->
                             <div class="featured-dishes-img">
-                                <img alt="featured-dishes" src="{{ Storage::url($item->gambar) }}">
+                                <img alt="recent-news-img" src="{{ Storage::url($item->foto) }}">
                             </div>
 
-                            <!-- Menampilkan rating bintang -->
-                            <ul class="star">
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                            </ul>
-
-                            <!-- Menampilkan nama menu -->
-                            <a href="{{ route('menu.show', $item->id) }}">
-                                <h5>{{ $item->nama_menu }}</h5>
+                            <!-- Menampilkan judul galeri -->
+                            <a href="{{ route('galery.show', $item->id_galery) }}">
+                                <h3>{{ $item->judul_galery }}</h3>
                             </a>
 
-                            <!-- Menampilkan deskripsi menu -->
+                            <!-- Menampilkan deskripsi galeri -->
                             <p>{{ $item->deskripsi }}</p>
 
-                            <!-- Menampilkan harga menu -->
-                            <p><span>Harga: </span>{{ $item->harga }}</p>
-
-                            <!-- Link menuju halaman detail menu -->
-                            <a href="{{ route('menu.show', $item->id) }}">
-                                <i><svg enable-background="new 0 0 512 512" viewBox="0 0 512 512"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                    <g>
-                                        <path
-                                            d="m452 120h-60.946c-7.945-67.478-65.477-120-135.054-120s-127.109 52.522-135.054 120h-60.946c-11.046 0-20 8.954-20 20v352c0 11.046 8.954 20 20 20h392c11.046 0 20-8.954 20-20v-352c0-11.046-8.954-20-20-20zm-196-80c47.484 0 87.019 34.655 94.659 80h-189.318c7.64-45.345 47.175-80 94.659-80zm176 432h-352v-312h40v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h192v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h40z">
-                                        </path>
-                                    </g>
-                                </svg></i>
+                            <!-- Menampilkan tanggal galeri -->
+                            <a href="#">
+                                <h9>{{ \Carbon\Carbon::parse($item->tanggal)->format('d F, Y') }}</h9>
                             </a>
                         </div>
                     </div>
                 @endforeach
             </div>
-
-            <!-- Tombol menuju halaman lebih lanjut -->
-            <div class="hamburger-icon">
-                <a href="{{ route('menu.index') }}" class="button">Lihat Semua Menu</a>
-            </div>
         </div>
     </section>
 
 
-    <section class="gap">
-        <div class="container">
-            <div class="row">
-                <div class="heading-two">
-                    <h2>Kutipan</h2>
-                    <div class="line"></div>
-                </div>
-            </div>
-            <div class="row mt-5">
-                @foreach ($kutipan as $index => $item)
-                    <div class="col-xl-4 col-lg-6">
-                        <div class="restaurant-card">
-                            <!-- Menampilkan gambar kutipan -->
-                            @if ($item->gambar)
-                                <img alt="Kutipan-img" class="w-100" src="{{ Storage::url($item->gambar) }}">
-                            @else
-                                <img alt="Default-img" class="w-100" src="assets/img/default-image.jpg">
-                                <!-- Gambar default jika tidak ada gambar -->
-                            @endif
 
-                            <div class="restaurant-span">
-                                <span>{{ $item->judul }}</span> <!-- Menampilkan judul kutipan -->
-                            </div>
-                            <div class="coctail-bar">
-                                <h5>{{ $item->judul }}</h5> <!-- Menampilkan judul kutipan -->
-                                <p>{{ $item->isi_kutipan }}</p> <!-- Menampilkan isi kutipan -->
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
-
-    <div class="gap no-top">
-        <div style="background-image: url(assets/img/follow.jpg)" class="follow">
-            <i class="fa-brands fa-instagram"></i>
-            <a href="#">
-                <h2>Follow @KantinAfwah</h2>
-            </a>
-            <p>Join our community to inspire your desires</p>
-        </div>
-    </div>
     <footer style="background-image: url(assets/img/footer.png);background-color: #f5f8fd;">
         <div class="container">
             <div class="row">
                 <div class="col-xl-4 col-lg-6">
                     <div class="logo-white">
                         <a href="index.html"><img alt="logo-white" src="assets/img/logo-white.png"></a>
-                        <p>Monday - Friday : 07:00am - 05:00pm
-                            <span>Closed on Saturday and Sunday</span>
+                        <p>Tuesday - Saturday: 12:00pm - 23:00pm
+                            <span>Closed on Sunday</span>
                         </p>
                         <img alt="tripa" src="assets/img/tripa.png">
                         <h6>5 star rated on TripAdvisor</h6>
@@ -446,7 +347,7 @@
                 </div>
             </div>
             <div class="footer-bootem">
-                <h6><span>© 2023 Foodio</span> | Kantin Afwah</h6>
+                <h6><span>© 2023 Foodio</span> | Restaurant and BBQ.</h6>
                 <div class="header-social-media">
                     <a href="#">Facebook</a>
                     <a href="#">Twitter</a>
@@ -467,8 +368,4 @@
     <!-- fancybox -->
     <script src="assets/js/jquery.fancybox.min.js"></script>
     <script src="assets/js/custom.js"></script>
-
-    <!-- Form Script -->
-    <script src="assets/js/contact.js"></script>
-    <script type="text/javascript" src="assets/js/sweetalert.min.js"></script>
 </body>

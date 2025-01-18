@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Kutipan;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class KutipanController extends Controller
 {
@@ -12,6 +13,7 @@ class KutipanController extends Controller
      */
     public function index()
     {
+
         $kutipan = Kutipan::all();
         return view('kutipan.index', compact('kutipan'));
     }
@@ -21,6 +23,7 @@ class KutipanController extends Controller
      */
     public function create()
     {
+
         return view('kutipan.create');
     }
 
@@ -38,14 +41,15 @@ class KutipanController extends Controller
         $kutipan = new Kutipan();
         $kutipan->judul = $request->judul;
         $kutipan->isi_kutipan = $request->isi_kutipan;
-
         if ($request->hasFile('gambar')) {
             $kutipan->gambar = $request->file('gambar')->store('images', 'public');
         }
 
+
         $kutipan->save();
 
         return redirect()->route('kutipan.index')->with('success', 'kutipan berhasil ditambahkan!');
+
     }
 
     /**
@@ -53,7 +57,7 @@ class KutipanController extends Controller
      */
     public function show(Kutipan $kutipan)
     {
-        //
+
     }
 
     /**
@@ -69,6 +73,7 @@ class KutipanController extends Controller
      */
     public function update(Request $request, Kutipan $kutipan)
     {
+
         $request->validate([
             'judul' => 'required|string|max:255',
             'isi_kutipan' => 'required|string|max:255',
@@ -89,6 +94,7 @@ class KutipanController extends Controller
         $kutipan->save();
 
         return redirect()->route('kutipan.index')->with('success', 'kutipan berhasil diubah!');
+
     }
 
     /**
@@ -97,7 +103,15 @@ class KutipanController extends Controller
     public function destroy(Kutipan $kutipan)
     {
 
+        // Menghapus gambar kutipan dari storage jika ada
+        if ($kutipan->gambar) {
+            Storage::delete('public/' . $kutipan->gambar);
+        }
+
+        // Menghapus data kutipan
         $kutipan->delete();
-        return redirect()->route('kutipan.index')->with('success', 'kutipan berhasil dihapus!');
+
+        return redirect()->route('kutipan.index')->with('success', 'Kutipan berhasil dihapus!');
+
     }
 }
