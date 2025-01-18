@@ -20,7 +20,23 @@
       <!-- jQuery -->
      <script src="assets/js/jquery-3.6.0.min.js"></script>
      <script src="assets/js/preloader.js"></script>
-   </head>
+
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .fast-food-img img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 20px
+        }
+        /* Tambahkan style lainnya sesuai kebutuhan */
+    </style>
+
+    </head>
   <body class="page-loaded">
   <!-- preloader -->
   <div class="preloader">
@@ -255,70 +271,85 @@
             <a href="JavaScript:void(0)" id="res-cross"></a>
     </div>
   </header>
+
+
   <section class="banner" style="background-image:url(assets/img/background.png)">
      <div class="container">
         <div class="row align-items-center">
            <div class="col-lg-7">
               <div class="title-area-data">
-                 <h2>Table Menu</h2>
-                 <p>A magical combination that sent aromas to the taste buds</p>
+                 <h2>Daftar Menu</h2>
+                 <p>Nikmati Setiap Kelezatan Cita Rasa Masakan Kantin Afwah </p>
               </div>
-              <ol class="breadcrumb">
-                 <li class="breadcrumb-item">
-                   <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
-                 </li>
-                 <li class="breadcrumb-item active" aria-current="page">Menus</li>
-                 <li class="breadcrumb-item active" aria-current="page">Menus 3</li>
-              </ol>
-           </div>
-           <div class="col-lg-5">
-              <div class="row">
-                 <div class="col-6">
-                    <div class="title-area-img">
-                       <img alt="title-area-img" src="assets/img/title-area-img-1.jpg">
 
-                    </div>
-                 </div>
-                 <div class="col-6">
-                    <div class="title-area-img two">
-                       <img alt="title-area-img" src="assets/img/title-area-img-2.jpg">
-                    </div>
-                 </div>
-              </div>
            </div>
+
         </div>
      </div>
   </section>
 
-  <section class="gap">
-     <div class="container">
-        <div class="heading-two">
-           <h2>Fast Food Menus</h2>
-           <div class="line"></div>
+  <section class="gap" style="margin-top: 2px; margin-bottom: 1px;">
+    <!-- Menu Makanan -->
+    <div class="container" style="padding-top: 1px; padding-bottom: 1px;">
+        <div class="heading-two" style="margin-bottom: 5px;">
+            <h2>Makanan</h2>
+            <div class="line"></div>
         </div>
         <div class="row">
-           <div class="col-xl-4 col-lg-6">
-              <div class="fast-food-menus">
-                 <div class="fast-food-img">
-                    <img alt="fast-food-img" src="assets/img/food-img-1.png">
-                 </div>
-                 <div>
-                    <h3>ShroomBacon Burger</h3>
-                    <span>$24.00</span>
-
-                 </div>
-                 <a href="#">
-                 <i></i></a>
-              </div>
-
-
-           </div>
-
-
+            @foreach ($daftarmenu as $item)
+            @if (strtolower($item->jenis_menu) === 'makanan')
+                    <div class="col-xl-4 col-lg-6" style="margin-bottom: 2px;">
+                        <div class="fast-food-menus">
+                            <div class="fast-food-img">
+                                <img src="{{ Storage::url($item->gambar) }}" class="w-full h-48 object-cover" alt="Gambar Menu" />
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold">{{ $item->nama_menu }}</h3>
+                                <span>Rp {{$item->harga}}</span>
+                                <p class="text-gray-600 mt-2">{{ Str::limit($item->deskripsi, 100) }}</p>
+                            </div>
+                        </div>
+                    </div>
+                @endif
+            @endforeach
         </div>
-     </div>
-  </section>
+    </div>
 
+    <br><br><br><br>
+    
+    <!-- Menu Minuman -->
+    <div class="container" style="padding-top: 1px; padding-bottom: 1px;">
+        <div class="heading-two" style="margin-bottom: 5px;">
+            <h2>Minuman</h2>
+            <div class="line"></div>
+        </div>
+        <div class="row">
+            @foreach ($daftarmenu as $item)
+            @if (strtolower($item->jenis_menu) === 'minuman')
+                    <div class="col-xl-4 col-lg-6" style="margin-bottom: 2px;">
+                        <div class="fast-food-menus">
+                            <div class="fast-food-img">
+                                <img src="{{ Storage::url($item->gambar) }}" class="w-full h-48 object-cover" alt="Gambar Menu" />
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold">{{ $item->nama_menu }}</h3>
+                                <span>Rp. {{$item->harga}}</span>
+                                <p class="text-gray-600 mt-2">{{ Str::limit($item->deskripsi, 100) }}</p>
+                            </div>
+                        </div>
+                    </div>
+                @endif
+            @endforeach
+        </div>
+    </div>
+</section>
+<footer style="background-image: url(assets/img/footer.png); background-color: #f5f8fd; margin-top: 1px; padding: 1px 0;">
+    <div class="container">
+       <div class="footer-bootem">
+          <h6><span>© 2025 Kantin Afwah</span> | Kantin PCR.</h6>
+       </div>
+    </div>
+</footer>
 
 
 
@@ -372,4 +403,5 @@
       // ]]>
   </script>
 
-  </body></html>
+
+</body></html>
