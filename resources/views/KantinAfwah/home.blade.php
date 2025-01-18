@@ -147,7 +147,7 @@
                                     </div>
                                 </li>
                                 <li class="navbar-dropdown">
-                                    <a href="about.html">Menu</a>
+                                    <a href="{{ route('KantinAfwah.daftarmenu')}}">Menu</a>
                                     <div class="dropdown">
                                         <a href="menu-1.html">Menu 1</a>
                                         <a href="menu-2.html">Menu 2</a>
@@ -155,7 +155,7 @@
                                     </div>
                                 </li>
                                 <li class="navbar-dropdown">
-                                    <a href="#">About Us</a>
+                                    <a href="{{ route('KantinAfwah.aboutus')}}">About Us</a>
                                     <div class="dropdown">
                                         <a href="shop.html">our product</a>
                                         <a href="product-details.html">product details</a>

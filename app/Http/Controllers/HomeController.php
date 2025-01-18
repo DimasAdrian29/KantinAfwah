@@ -9,6 +9,8 @@ use Illuminate\View\View;
 use App\Models\Slider;
 use App\Models\Promo;
 use App\Models\PesanSaran;
+use App\Models\Menu;
+use App\Models\About;
 
 class HomeController extends Controller
 {
@@ -26,9 +28,12 @@ class HomeController extends Controller
         $promo=Promo::all();
         return view('KantinAfwah.halamanpromo', compact("promo"));
     }
-    public function about_us()
+
+    public function aboutus()
+
     {
-        return view('KantinAfwah.about');
+        $aboutus = About::all();
+        return view('KantinAfwah.aboutus', compact('aboutus'));
     }
     public function pesandansaran()
     {
@@ -38,6 +43,12 @@ class HomeController extends Controller
     public function footer()
     {
         return view('KantinAfwah.footer');
+    }
+    public function daftarmenu()
+    {
+
+        $daftarmenu = Menu::all();
+        return view('KantinAfwah.daftarmenu', compact('daftarmenu'));
     }
     public function career()
     {
