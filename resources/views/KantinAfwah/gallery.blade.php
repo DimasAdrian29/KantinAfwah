@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foodio - Our blog</title>
-    <link rel="icon" href="assets/img/logo-icon.png">
+    <link rel="icon" href="https://s3-alpha-sig.figma.com/img/0748/0615/6665106318dd0fedf02562c8d127af57?Expires=1737936000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=n0aGPYWEyg5VTZBNl8~WgFsalgK5kFvyNAJ9~ZoGu0vMO2lIqqeZLdC-Ub-Dyd6yHyo3n2uHgtEfjn6wQ6ZCCK9S5pEuOLg6mQhcYXOQp-opne6y8EHmCdXLXXXuNQrr6ApPJe54B0MZJ0lBT2RyTmKFVMHT5U6-egR8DDk3RLRwWxUO86YvuFaT2ob06uclDhMG7pCH~44qRhOOAeoT~VrHri2wL9m4yUTaE~5iqR~TcAUyKSWADlNL33DwKaKgB-aexXpO-d7GjMIppg1V-aZ5p7cEriewbWKqwOI8qNVXTRaBVmmBAiTvKJWwoc7paqUcS5rX15H-8vDa23vhTg__">
     <!-- CSS only -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
@@ -113,7 +113,7 @@
                         <div class="d-flex align-items-center justify-content-between">
                             <div class="logo">
                                 <a href="index.html">
-                                    <img alt="logo" src="assets/img/logo.png">
+                                    <img alt="logo" src="https://s3-alpha-sig.figma.com/img/0748/0615/6665106318dd0fedf02562c8d127af57?Expires=1737936000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=n0aGPYWEyg5VTZBNl8~WgFsalgK5kFvyNAJ9~ZoGu0vMO2lIqqeZLdC-Ub-Dyd6yHyo3n2uHgtEfjn6wQ6ZCCK9S5pEuOLg6mQhcYXOQp-opne6y8EHmCdXLXXXuNQrr6ApPJe54B0MZJ0lBT2RyTmKFVMHT5U6-egR8DDk3RLRwWxUO86YvuFaT2ob06uclDhMG7pCH~44qRhOOAeoT~VrHri2wL9m4yUTaE~5iqR~TcAUyKSWADlNL33DwKaKgB-aexXpO-d7GjMIppg1V-aZ5p7cEriewbWKqwOI8qNVXTRaBVmmBAiTvKJWwoc7paqUcS5rX15H-8vDa23vhTg__">
                                 </a>
                             </div>
                             <div class="d-flex cart-checkout">
@@ -161,6 +161,68 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="mobile-nav hmburger-menu" id="mobile-nav" style="display:block;">
+            <div class="res-log">
+              <a href="index.html">
+                <img src="assets/img/logo.png" alt="Responsive Logo" class="white-logo">
+              </a>
+            </div>
+              <ul>
+      
+                <li class="menu-item-has-children"><a href="JavaScript:void(0)">Home</a>
+                  <ul class="sub-menu">
+      
+                    <li><a href="index.html">home page 1</a></li>
+                    <li><a href="index-2.html">home page 2</a></li>
+                    <li><a href="index-3.html">home page 3</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="JavaScript:void(0)">menus</a>
+                  <ul class="sub-menu">
+                    <li><a href="menu-1.html">menu 1</a></li>
+                    <li><a href="menu-2.html">menu 2</a></li>
+                    <li><a href="menu-3.html">menu 3</a></li>
+                  </ul>
+                </li>
+      
+                
+                <li class="menu-item-has-children"><a href="JavaScript:void(0)">shop</a>
+      
+                <ul class="sub-menu">
+                  <li><a href="shop.html">our product</a></li>
+                  <li><a href="product-details.html">product details</a></li>
+                  <li><a href="shop-cart.html">shop cart</a></li>
+                  <li><a href="cart-checkout.html">cart checkout</a></li>
+                </ul>
+      
+                </li>
+                <li class="menu-item-has-children"><a href="JavaScript:void(0)">News</a>
+      
+                <ul class="sub-menu">
+      
+                 <li><a href="our-blog.html">our blog</a></li>
+                          <li><a href="blog-details.html">blog details</a></li>
+                </ul>
+      
+                </li>
+                <li class="menu-item-has-children"><a href="JavaScript:void(0)">Pages</a>
+      
+                <ul class="sub-menu">
+      
+                  <li><a href="about.html">about</a></li>
+                  <li><a href="our-services.html">our services</a></li>
+                  <li><a href="chef-details.html">chef details</a></li>
+                  <li><a href="login.html">login</a></li>
+                </ul>
+      
+                </li>
+      
+                <li><a href="contact.html">contacts</a></li>
+      
+                </ul>
+      
+                <a href="JavaScript:void(0)" id="res-cross"></a>
         </div>
     </header>
 

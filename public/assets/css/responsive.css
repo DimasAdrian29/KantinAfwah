@@ -132,8 +132,11 @@
   .featured-arae-three h1 {
     font-size: 74px;
   }
+  .navbar .logo img {
+    width: 120px; /* Ukuran logo di layar kecil */
+}
   .logo img {
-    width: 80%;
+    width: 50%;
   }
   ul.star li i {
     font-size: 12px;
@@ -442,6 +445,7 @@
   .featured-dishes-img img {
     margin: auto;
     width: 100%;
+    border-radius: 15px;
   }
   .recent-news h3 {
     width: 100%;

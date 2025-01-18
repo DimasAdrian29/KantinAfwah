@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foodio - Home 1</title>
-    <link rel="icon" href="assets/img/logo-icon.png">
+    <link rel="icon" href="https://s3-alpha-sig.figma.com/img/0748/0615/6665106318dd0fedf02562c8d127af57?Expires=1737936000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=n0aGPYWEyg5VTZBNl8~WgFsalgK5kFvyNAJ9~ZoGu0vMO2lIqqeZLdC-Ub-Dyd6yHyo3n2uHgtEfjn6wQ6ZCCK9S5pEuOLg6mQhcYXOQp-opne6y8EHmCdXLXXXuNQrr6ApPJe54B0MZJ0lBT2RyTmKFVMHT5U6-egR8DDk3RLRwWxUO86YvuFaT2ob06uclDhMG7pCH~44qRhOOAeoT~VrHri2wL9m4yUTaE~5iqR~TcAUyKSWADlNL33DwKaKgB-aexXpO-d7GjMIppg1V-aZ5p7cEriewbWKqwOI8qNVXTRaBVmmBAiTvKJWwoc7paqUcS5rX15H-8vDa23vhTg__">
     <!-- CSS only -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
@@ -113,7 +113,7 @@
                         <div class="d-flex align-items-center justify-content-between">
                             <div class="logo">
                                 <a href="index.html">
-                                    <img alt="logo" src="assets/img/logo.png">
+                                    <img alt="logo" src="https://s3-alpha-sig.figma.com/img/0748/0615/6665106318dd0fedf02562c8d127af57?Expires=1737936000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=n0aGPYWEyg5VTZBNl8~WgFsalgK5kFvyNAJ9~ZoGu0vMO2lIqqeZLdC-Ub-Dyd6yHyo3n2uHgtEfjn6wQ6ZCCK9S5pEuOLg6mQhcYXOQp-opne6y8EHmCdXLXXXuNQrr6ApPJe54B0MZJ0lBT2RyTmKFVMHT5U6-egR8DDk3RLRwWxUO86YvuFaT2ob06uclDhMG7pCH~44qRhOOAeoT~VrHri2wL9m4yUTaE~5iqR~TcAUyKSWADlNL33DwKaKgB-aexXpO-d7GjMIppg1V-aZ5p7cEriewbWKqwOI8qNVXTRaBVmmBAiTvKJWwoc7paqUcS5rX15H-8vDa23vhTg__">
                                 </a>
                             </div>
                             <div class="d-flex cart-checkout">
