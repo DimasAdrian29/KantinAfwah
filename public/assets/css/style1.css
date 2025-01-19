@@ -289,21 +289,10 @@ figure {
     text-transform: capitalize;
     font-size: 18px;
 }
-.hamburger-icon {
+.hamburger-icon{
     display: flex;
-    justify-content: center;  /* Meratakan tombol secara horizontal */
-    align-items: center;      /* Meratakan tombol secara vertikal */
-    height: 100%;             /* Mengambil seluruh tinggi kontainer */
-    margin-top: 20px;         /* Memberi jarak 20px dari atas kontainer */
-}
-
-
-.button {
-    padding: 10px 20px;       /* Padding tombol */
-    background-color: #007bff;  /* Warna latar belakang tombol */
-    color: white;             /* Warna teks tombol */
-    text-decoration: none;    /* Menghilangkan garis bawah */
-    border-radius: 5px;       /* Membulatkan sudut tombol */
+    align-items: center;
+    justify-content: end;
 }
 .hamburger-icon svg {
     width: 25px;

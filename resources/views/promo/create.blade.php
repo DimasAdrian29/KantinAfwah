@@ -33,10 +33,6 @@
                 <textarea name="deskripsi" rows="5" class="mt-1 block w-full border-gray-300 rounded-md">{{ old('deskripsi') }}</textarea>
             </div>
 
-            <div class="mb-4">
-                <label class="block text-sm font-medium">Syarat dan Ketentuan: </label>
-                <textarea name="syarat_dan_ketentuan" rows="5" class="mt-1 block w-full border-gray-300 rounded-md">{{ old('syarat_dan_ketentuan') }}</textarea>
-            </div>
 
             <div class="mb-4">
                 <label class="block text-sm font-medium">Gambar: </label>

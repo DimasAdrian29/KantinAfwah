@@ -37,7 +37,6 @@ class PromoController extends Controller
             'gambar' => 'required|image|mimes:jpg,jpeg,png|max:2048',
             'tanggal_awal_promo' => 'required|date',
             'tanggal_akhir_promo' => 'required|date|after_or_equal:tanggal_awal_promo',
-            'syarat_dan_ketentuan' => 'required|string',
         ]);
 
         $promo = new Promo();
@@ -45,7 +44,7 @@ class PromoController extends Controller
         $promo->deskripsi = $request->deskripsi;
         $promo->tanggal_awal_promo = $request->tanggal_awal_promo;
         $promo->tanggal_akhir_promo = $request->tanggal_akhir_promo;
-        $promo->syarat_dan_ketentuan = $request->syarat_dan_ketentuan;
+        $promo->syarat_dan_ketentuan = "-";
 
         if ($request->hasFile('gambar')) {
             $promo->gambar = $request->file('gambar')->store('images/promo', 'public');

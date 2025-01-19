@@ -68,15 +68,10 @@ class PesanSaranController extends Controller
     public function update(Request $request, PesanSaran $pesanSaran): RedirectResponse
     {
         $request->validate([
-            'nama' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
-            'pesan' => 'required|string',
             'jawaban' => 'nullable|string',
         ]);
 
-        $pesanSaran->nama = $request->nama;
-        $pesanSaran->email = $request->email;
-        $pesanSaran->pesan = $request->pesan;
+
         $pesanSaran->jawaban = $request->jawaban;
         $pesanSaran->save();
 
