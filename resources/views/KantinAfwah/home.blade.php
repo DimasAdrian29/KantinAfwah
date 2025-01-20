@@ -245,16 +245,7 @@
                             <p><span>Harga: </span>{{ $item->harga }}</p>
 
                             <!-- Link menuju halaman detail menu -->
-                            <a href="{{ route('menu.show', $item->id) }}">
-                                <i><svg enable-background="new 0 0 512 512" viewBox="0 0 512 512"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                    <g>
-                                        <path
-                                            d="m452 120h-60.946c-7.945-67.478-65.477-120-135.054-120s-127.109 52.522-135.054 120h-60.946c-11.046 0-20 8.954-20 20v352c0 11.046 8.954 20 20 20h392c11.046 0 20-8.954 20-20v-352c0-11.046-8.954-20-20-20zm-196-80c47.484 0 87.019 34.655 94.659 80h-189.318c7.64-45.345 47.175-80 94.659-80zm176 432h-352v-312h40v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h192v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h40z">
-                                        </path>
-                                    </g>
-                                </svg></i>
-                            </a>
+
                         </div>
                     </div>
                 @endforeach
@@ -272,7 +263,7 @@
         <div class="container">
             <div class="row">
                 <div class="heading-two">
-                    <h2>Kutipan</h2>
+                    <h2>Quotes</h2>
                     <div class="line"></div>
                 </div>
             </div>
@@ -281,19 +272,13 @@
                     <div class="col-xl-4 col-lg-6">
                         <div class="restaurant-card">
                             <!-- Menampilkan gambar kutipan -->
-                            @if ($item->gambar)
-                                <img alt="Kutipan-img" class="w-100" src="{{ Storage::url($item->gambar) }}">
-                            @else
-                                <img alt="Default-img" class="w-100" src="assets/img/default-image.jpg">
+                                <img alt="assets/img/bgkutipan.jpg" class="w-100" src="assets\img\kataktata.png" style="height: 300px">
                                 <!-- Gambar default jika tidak ada gambar -->
-                            @endif
 
-                            <div class="restaurant-span">
-                                <span>{{ $item->judul }}</span> <!-- Menampilkan judul kutipan -->
-                            </div>
+
                             <div class="coctail-bar">
-                                <h5>{{ $item->judul }}</h5> <!-- Menampilkan judul kutipan -->
-                                <p>{{ $item->isi_kutipan }}</p> <!-- Menampilkan isi kutipan -->
+                                <h5>by: {{ $item->nama }}</h5> <!-- Menampilkan judul kutipan -->
+                                <p>{{ $item->quotes }}</p> <!-- Menampilkan isi kutipan -->
                             </div>
                         </div>
                     </div>

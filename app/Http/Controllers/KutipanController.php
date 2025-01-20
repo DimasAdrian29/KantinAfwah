@@ -33,17 +33,15 @@ class KutipanController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'judul' => 'required|string|max:255',
-            'isi_kutipan' => 'required|string|max:255',
-            'gambar' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+            'quotes' => 'required|string|max:255',
+            'nama' => 'required|string|max:255',
+
         ]);
 
         $kutipan = new Kutipan();
-        $kutipan->judul = $request->judul;
-        $kutipan->isi_kutipan = $request->isi_kutipan;
-        if ($request->hasFile('gambar')) {
-            $kutipan->gambar = $request->file('gambar')->store('images', 'public');
-        }
+        $kutipan->judul = $request->quotes;
+        $kutipan->isi_kutipan = $request->nama;
+
 
 
         $kutipan->save();
@@ -75,21 +73,15 @@ class KutipanController extends Controller
     {
 
         $request->validate([
-            'judul' => 'required|string|max:255',
-            'isi_kutipan' => 'required|string|max:255',
-            'gambar' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+            'quotes' => 'required|string|max:255',
+            'nama' => 'required|string|max:255',
+
         ]);
 
 
-        $kutipan->judul = $request->judul;
-        $kutipan->isi_kutipan = $request->isi_kutipan;
+        $kutipan->quotes = $request->quotes;
+        $kutipan->nama = $request->nama;
 
-        if ($request->hasFile('gambar')) {
-            if ($kutipan->gambar){
-                Storage::delete('public/storage'. $kutipan->gambar);
-            }
-            $kutipan->gambar = $request->file('gambar')->store('images', 'public');
-        }
 
         $kutipan->save();
 

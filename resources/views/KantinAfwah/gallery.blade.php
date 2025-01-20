@@ -178,45 +178,52 @@
         </div>
     </section>
 
-    <section class="gap our-blog">
-        <div class="container">
-            <div class="heading-two">
-                <h2>Galeri Kami</h2>
-                <div class="line"></div>
+    <div class="container gap">
+        <div class="heading-two">
+            <h2>Galeri Kami</h2>
+            <div class="line"></div>
+        </div>
+        <div class="row">
+            <div class="photo-gallery">
+                @foreach ($galery as $item)
+                <div class="featured-imagebox featured-imagebox-gallery">
+                    <a href="{{ Storage::url($item->foto) }}" data-fancybox="gallery">
+                        <div class="featured-link">
+                            <div class="featured-thumbnail">
+                                <img
+                                    class="img-fluid"
+                                    src="{{ Storage::url($item->foto) }}"
+                                    alt="gallery-img">
+                            </div>
+                            <div class="featured-overlay"></div>
+                        </div>
+                    </a>
+                </div>
+                @endforeach
             </div>
 
-            <!-- Menampilkan galeri dalam carousel seperti promo -->
+            <style>
+                .photo-gallery {
+                    display: flex;
+                    flex-wrap: wrap; /* Gambar akan turun ke bawah jika ruang tidak cukup */
+                    gap: 10px; /* Jarak antar gambar */
+                }
 
-                @foreach ($galery as $index => $item)
-                    <!-- Looping data galeri -->
-                    <div class="item col-xl-12">
-                        <div class="featured-dishes">
-                            <!-- Menampilkan gambar galeri -->
-                            <div class="featured-dishes-img">
-                                <div class="featured-dishes-img">
-                                    <img alt="recent-news-img" src="{{ Storage::url($item->foto) }}" width="700">
-                                </div>
+                .featured-imagebox {
+                    flex: 1 1 calc(33.33% - 10px); /* Gambar memiliki lebar responsif */
+                    max-width: calc(33.33% - 10px); /* Batas maksimal lebar gambar */
+                    box-sizing: border-box; /* Memastikan padding tidak memengaruhi lebar total */
+                }
 
-                            </div>
-
-                            <!-- Menampilkan judul galeri -->
-                            <a href="{{ route('galery.show', $item->id_galery) }}">
-                                <h3>{{ $item->judul_galery }}</h3>
-                            </a>
-
-                            <!-- Menampilkan deskripsi galeri -->
-                            <p>{{ $item->deskripsi }}</p>
-
-                            <!-- Menampilkan tanggal galeri -->
-                            <a href="#">
-                                <h9>{{ \Carbon\Carbon::parse($item->tanggal)->format('d F, Y') }}</h9>
-                            </a>
-                        </div>
-                    </div>
-                @endforeach
-
+                .featured-thumbnail img {
+                    width: 100%; /* Gambar menyesuaikan dengan lebar kontainer */
+                    height: auto; /* Menjaga rasio aspek gambar */
+                    max-height: 300px; /* Batas maksimal tinggi gambar */
+                }
+            </style>
         </div>
-    </section>
+    </div>
+
 
 
     <footer style="background-image: url(assets/img/footer.png); background-color: #f5f8fd; margin-top: 1px; padding: 1px 0;">

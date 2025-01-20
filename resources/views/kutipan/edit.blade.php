@@ -5,20 +5,14 @@
             @csrf
             @method('PUT')
             <div class="mb-4">
-                <label class="block text-sm font-medium">Judul</label>
-                <input type="text" name="judul" value="{{ $kutipan->judul }}" class="mt-1 block w-full border-gray-300 rounded-md" required />
+                <label class="block text-sm font-medium">quotes</label>
+                <input type="text" name="quotes" value="{{ $kutipan->quotes }}" class="mt-1 block w-full border-gray-300 rounded-md" required />
             </div>
             <div class="mb-4">
-                <label class="block text-sm font-medium">Isi Kutipan</label>
-                <textarea name="isi_kutipan" id="editor" rows="5" class="mt-1 block w-full border-gray-300 rounded-md" required>{{ $kutipan->isi_kutipan }}</textarea>
+                <label class="block text-sm font-medium">nama</label>
+                <input type="text" name="nama" value="{{ $kutipan->nama }}" class="mt-1 block w-full border-gray-300 rounded-md" required />
             </div>
-            <div class="mb-4">
-                <label class="block text-sm font-medium">Gambar</label>
-                <input type="file" name="gambar" class="mt-1 block w-full" accept="image/*" />
-                @if ($kutipan->gambar)
-                    <img src="{{ Storage::url($kutipan->gambar) }}" class="h-48 mt-2" alt="Gambar" />
-                @endif
-            </div>
+
             <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Update</button>
         </form>
     </div>

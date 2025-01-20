@@ -22,40 +22,40 @@
      <script src="assets/js/jquery-3.6.0.min.js"></script>
      <script src="assets/js/preloader.js"></script>
 <style>
-    .about-img {
+    .about-img9 {
     width: 150px; /* Adjust this value as needed */
     height: auto; /* Maintain aspect ratio */
     border-radius: 50%; /* Make the image circular */
     margin-right: 20px; /* Add spacing between image and text */
 }
 /* CSS Grid Setup */
-.grid {
+.grid9 {
     display: grid;
 }
 
 /* Adjust column count for different screen sizes */
 @media (min-width: 768px) {
-    .grid-cols-2 {
+    .grid-cols-29 {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 /* Image Styling */
-.history-img {
+.history-img9 {
     width: 100%;
     max-width: 400px; /* Set a maximum width for the image */
     height: auto;
     border-radius: 10px;
     margin-bottom: 20px;
 }
-.history {
+.history9 {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 50px 0;
 }
 
-.row {
+.row9 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -222,7 +222,7 @@
   @foreach ($aboutus as $item)
   <section class="gap">
      <div class="container">
-        <div class="row">
+        <div class="row9">
            <div class="col-xl-5">
               <div class="heading">
                  <span>Kantin Afwah</span>
@@ -233,7 +233,7 @@
             <span>Kenalan sama pemiliknya yuk!</span>
               <div class="about-text">
                  <div class="mt-4 d-flex align-items-center">
-                    <img alt="girl" src="{{ asset('storage/' . $item->gambar_pemilik)}}" class="about-img">
+                    <img alt="girl" src="{{ asset('storage/' . $item->gambar_pemilik)}}" class="about-img9">
                     <div>
                        <p>{{$item->deskripsi_pemilik}}</p>
                     </div>
@@ -243,7 +243,7 @@
         </div>
      </div>
   </section>
-  <section class="history">
+  <section class="history9">
     <div class="col">
     </div>
     <div class="col">
@@ -252,7 +252,7 @@
     <div class="container">
         <div class="row grid grid-cols-1 md:grid-cols-2">
             <div class="col">
-                <img src="{{ asset('storage/' . $item->gambar_kantin) }}" alt="Sejarah Kantin" class="history-img">
+                <img src="{{ asset('storage/' . $item->gambar_kantin) }}" alt="Sejarah Kantin" class="history-img9">
             </div>
             <div class="col">
                 <p>{{$item->deskripsi_kantin}}</p>
@@ -260,9 +260,10 @@
         </div>
     </div>
 </section>
+
 <section>
   <div class="container">
-    <div class="row">
+    <div class="row9">
        <div class="col-xl-6">
           <div class="get-in-touch">
              <h2>Informasi Kontak</h2>
@@ -287,8 +288,6 @@
              </li>
              </ul>
           </div>
-          <div class="mapouter"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.620310083532!2d101.42387657496475!3d0.5708298994235937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5ab676f69bb01%3A0xfc04c99b0bbd2b1b!2sKantin%20Kampus%20PCR!5e0!3m2!1sen!2sid!4v1737032374752!5m2!1sen!2sid"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
           <div class="align-items-center d-flex mt-3">
              <i class="fa-solid fa-location-dot me-3"></i>
              <p>{{$item->alamat}}</p>
@@ -297,6 +296,11 @@
     </div>
  </div>
  <br> <br> <br>
+
+</section>
+<section>
+<div class="mapouter"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.620310083532!2d101.42387657496475!3d0.5708298994235937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5ab676f69bb01%3A0xfc04c99b0bbd2b1b!2sKantin%20Kampus%20PCR!5e0!3m2!1sen!2sid!4v1737032374752!5m2!1sen!2sid"
+    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
 </section>
 @endforeach
 
