@@ -12,9 +12,15 @@
                 <label class="block text-sm font-medium">Harga</label>
                 <input type="text" name="harga" value="{{ $menu->harga }}" class="mt-1 block w-full border-gray-300 rounded-md" required />
             </div>
-            <div class="mb-4">
-                <label class="block text-sm font-medium">Jenis Menu</label>
-                <input type="text" name="jenis_menu" class="mt-1 block w-full border-gray-300 rounded-md" required />
+            <div class="mt-1">
+                <label class="inline-flex items-center">
+                    <input type="radio" name="jenis_menu" value="makanan" class="form-radio border-gray-300" required />
+                    <span class="ml-2">Makanan</span>
+                </label>
+                <label class="inline-flex items-center ml-4">
+                    <input type="radio" name="jenis_menu" value="minuman" class="form-radio border-gray-300" required />
+                    <span class="ml-2">Minuman</span>
+                </label>
             </div>
             <div class="mb-4">
                 <label class="block text-sm font-medium">Deskripsi</label>

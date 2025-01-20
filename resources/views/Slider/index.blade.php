@@ -29,8 +29,7 @@
                     <img src="{{ Storage::url($slider->gambar_slider) }}" class="w-full h-48 object-cover"
                         alt="Slider Gambar {{ $slider->id_slider }}" />
                     <div class="p-4">
-                        <!-- Menampilkan informasi ID Slider -->
-                        <h2 class="text-lg font-bold">ID: {{ $slider->id_slider }}</h2>
+
 
                         <!-- Tombol Edit dan Hapus -->
                         <div class="mt-4">

@@ -1,66 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
+<x-app-layout>
+    <div class="h-screen w-screen py-10 px-8">
+        <h1 class="text-3xl font-extrabold text-center text-gray-800 mb-8">About Us</h1>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UMKM Profile</title>
-    <link rel="stylesheet" href="{{ asset('css/styleAboutUs.css') }}">
-</head>
-
-<body>
-
-    <header>
-        <div class="container">
-            <h1>Kantin Afwah</h1>
-        </div>
-    </header>
-    @foreach ($about as $item)
-    <section id="about" class="about-us">
-        <div class="container">
-            <div class="text-with-image">
-                <img src="{{ asset('storage/' . $item->gambar_kantin) }}" alt="Deskripsi Gambar">
-                <p>{{ $item->deskripsi_kantin }}</p>
+        <!-- Menampilkan pesan sukses jika ada -->
+        @if (session('success'))
+            <div class="bg-green-500 text-white p-4 rounded-lg shadow-md mb-6 text-center">
+                {{ session('success') }}
             </div>
-            <br><br><br>
-            <h3>Kenalan sama pemilik nya, Yuk!</h3>
-            <div class="text-with-image">
-                <p>{{ $item->deskripsi_pemilik }}</p>
-                <img src="{{ asset('storage/' . $item->gambar_pemilik) }}" alt="Deskripsi Gambar">
+        @endif
+
+        <!-- Menampilkan pesan error jika ada -->
+        @if (session('error'))
+            <div class="bg-red-500 text-white p-4 rounded-lg shadow-md mb-6 text-center">
+                {{ session('error') }}
             </div>
-            <div class="profile-info">
-                <br>
-                <header>
-                    <h3>Contact Information</h3>
-                </header>
-                <br><br>
-                <div class="text-with-image">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5925.529062952577!2d101.42704892
-                        437945!3d0.5707925165923752!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5ab676f69bb01%3A0xfc04c99b0bbd2b1b!2s
-                        Kantin%20Kampus%20PCR!5e0!3m2!1sen!2sid!4v1733923469948!5m2!1sen!2sid"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                    <ul>
-                        <li><strong>Location:</strong>{{ $item->alamat }}</li>
-                        <li><strong>Phone:</strong>{{ $item->kontak }}</li>
-                        <li><strong>Email:</strong>{{ $item->email }}</li>
-                    </ul>
+        @endif
+
+        <div>
+            @foreach ($about as $item)
+                <div class="p-6 bg-white rounded-lg shadow-lg w-full h-full">
+                    <h2 class="text-lg font-bold">Foto Pemilik</h2>
+                    <img src="{{ asset('storage/' . $item->gambar_pemilik) }}" alt="Foto Pemilik" class="w-full rounded-md mb-4" style="width: 350px; height: 225px;">
+
+                    <h1 class="text-lg font-bold">Foto Kantin</h1>
+                    <img src="{{ asset('storage/' . $item->gambar_kantin) }}" alt="Foto Kantin" class="w-full rounded-md mb-4" style="width: 350px; height: 225px;">
+
+                    <h2 class="text-lg font-bold">Deskripsi Kantin:</h2>
+                    <p class="text-sm text-gray-500 mb-4">{{ $item->deskripsi_kantin }}</p>
+
+                    <h2 class="text-lg font-bold">Deskripsi Pemilik:</h2>
+                    <p class="text-sm text-gray-500 mb-4">{{ $item->deskripsi_pemilik }}</p>
+
+                    <h2 class="text-lg font-bold">Email:</h2>
+                    <p class="text-sm text-gray-500 mb-4">{{ $item->email }}</p>
+
+                    <h2 class="text-lg font-bold">Lokasi:</h2>
+                    <p class="text-sm text-gray-500 mb-4">{{ $item->alamat }}</p>
+
+                    <h2 class="text-lg font-bold">Nomor HP:</h2>
+                    <p class="text-sm text-gray-500 mb-4">{{ $item->kontak }}</p>
+
+                    <div class="text-center">
+                        <a href="{{ route('about.edit', $item->id) }}">
+                            <x-primary-button class="ms-3">
+                               Edit
+                            </x-primary-button>
+                        </a>
+                    </div>
                 </div>
-            </div>
+            @endforeach
         </div>
-    </section>
-    <a href="{{ route('about.edit', $item->id) }}" class="inline-block bg-blue-500 text-white px-4 py-2 rounded mb-4">
-        Edit
-    </a>
-
-    @endforeach
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Kantin Afwan. All Rights Reserved.</p>
-        </div>
-    </footer>
-</body>
-
-</html>
+    </div>
+</x-app-layout>

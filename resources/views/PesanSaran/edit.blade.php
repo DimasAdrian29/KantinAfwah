@@ -6,7 +6,7 @@
             @method('PUT')
             <div class="mb-4">
                 <label class="block text-sm font-medium">Jawaban: </label>
-                <textarea name="jawaban" rows="5" class="mt-1 block w-full border-gray-300 rounded-md">{{ $pesanSaran->jawaban }}</textarea>
+                <textarea name="jawaban" rows="5" class="mt-1 block w-full border-gray-300 rounded-md"></textarea>
             </div>
 
             <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Update</button>
