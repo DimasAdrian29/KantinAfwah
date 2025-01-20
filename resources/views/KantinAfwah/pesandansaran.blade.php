@@ -369,34 +369,8 @@
                         <span>Post Review</span>
                     </button>
                 </form>
-                <br><br>
-                <h3>Pesan dan Saran</h3>
-                @foreach ($pesansaran as $item)
-                <div class="single-comment">
-                    <img alt="img" src="assets/img/gambarprofil.jpg" style="width: 125px; height: 125px;">
-                    <div class="ps-md-4">
-                      <div class="d-flex align-items-center">
-                        <h4>{{ $item->nama }}</h4>
-                        <span>{{ $item->created_at }}</span>
-                        </div>
-                        <p>{{ $item->pesan }}</p>
-                        <p></p><p>
-                            @if ($item->jawaban === 'kosong')
-                                <!-- Jika jawaban adalah "kosong", tampilkan string kosong -->
-
-                            @else
-                                <!-- Jika jawaban tidak "kosong", tampilkan nilai jawaban -->
-                                balasan:{{ $item->jawaban }}
-                            @endif
-                        </p>
-
-                    </div>
-                </div>
-            @endforeach
-
                 <br>
-
-
+                <br>
               </div>
      </div>
 
